@@ -135,10 +135,10 @@ a.btn:hover {
     </div>
     <div class="error_bubble">
         <div class="error_code">404<br><span>ERROR</span></div>
-        <div class="error_quote">Webpages? Where we're going, we don't need webpages.</div>
+        <div class="error_quote">He's off the map! He's off the map!</div>
     </div>
     <div class="error_arrow"></div>
-    <div class="error_attrib">        <span>Dr. Emmett Brown, </span>        <a href="/title/tt0088763/">Back to the Future (1985)</a>
+    <div class="error_attrib">        <span>Stan, </span>        <a href="/title/tt0338013/">Eternal Sunshine of the Spotless Mind (2004)</a>
     </div>
     <div class="clear"></div>
 </div>
