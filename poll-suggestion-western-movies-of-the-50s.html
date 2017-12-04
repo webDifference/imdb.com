@@ -1,0 +1,2195 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"0568210e14","applicationID":"1887881","transactionName":"cFtcQRYOWw1SQRh1X1dQXlATAEUEGGFWW10cdVFBDQ5ZJV5AR1lCUFwIDzYOQhVeXVACDGFbR0EBMlIVGFBWVFo=","queueTime":0,"applicationTime":717,"agent":""}</script>
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UgABVUVSAAsHXFlT"};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(15),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,o){try{d?d-=1:i("err",[o||new UncaughtException(t,n,e)])}catch(s){try{i("ierr",[s,c.now(),!0])}catch(u){}}return"function"==typeof f&&f.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t){i("err",[t,c.now()])}var i=t("handle"),a=t(16),s=t("ee"),c=t("loader"),f=window.onerror,u=!1,d=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),u=!0)}s.on("fn-start",function(t,n,e){u&&(d+=1)}),s.on("fn-err",function(t,n,e){u&&(this.thrown=!0,o(e))}),s.on("fn-end",function(){u&&!this.thrown&&d>0&&(d-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var b=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof b&&(this.bstStart=g.now())}),o.on(w,function(t,n){var e=t[0];e instanceof b&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(18)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(18)(r);n.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(18)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(18)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){g.push(t),h&&(x?x.then(a):w?w(a):(E=-E,O.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(18)(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];n.exports=u;var b=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(v,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,b),b.prototype=p.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var x=m&&m.resolve();if(!w&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],10:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!n.aborted){if(e.duration=a.now()-this.startTime,4===t.readyState){n.status=t.status;var i=o(t,this.lastSize);if(i&&(e.rxSize=i),this.sameOrigin){var c=t.getResponseHeader("X-NewRelic-App-Data");c&&(n.cat=c.split(", ").pop())}}else n.status=0;e.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[n,e,this.startTime])}}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return h(r)}function i(t,n){var e=c(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=h(r);i&&(e.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{f.emit("internal-error",[e])}catch(r){}}};for(var s=0;s<d;s++)n.addEventListener(u[s],this.listener,!1)}),f.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),f.on("xhr-load-added",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],n)}),f.on("removeEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],n)}),f.on("fn-start",function(t,n,e){n instanceof m&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,n){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,n],n)})}},{}],11:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],12:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(15),s=t(16),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}finally{c.emit("fn-end",[f.now()],e)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now()])}},{}],13:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],14:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],15:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],16:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],17:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],18:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=h(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[y[e]];return d&&d.push([g,e,r,a]),a}}function p(t,n){v[t]=h(t).concat(n)}function h(t){return v[t]||[]}function m(t){return d[t]=d[t]||o(e)}function w(t,n){f(t,function(t,e){n=n||"feature",y[e]=n,n in u||(u[n]=[])})}var v={},y={},g={on:p,emit:e,get:m,listeners:h,context:n,buffer:w,abort:a,aborted:!1};return g}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(15),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!x++){var t=b.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(y,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=l.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===l.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(15),u=t("ee"),d=window,l=d.document,p="addEventListener",h="attachEvent",m=d.XMLHttpRequest,w=m&&m.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:m,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},g=m&&w&&w[p]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:v,features:{},xhrWrappable:g};t(12),l[p]?(l[p]("DOMContentLoaded",i,!1),d[p]("load",r,!1)):(l[h]("onreadystatechange",o),d[h]("onload",r)),c("mark",["firstbyte",s],null,"api");var x=0,E=t(17)},{}]},{},["loader",2,10,4,3]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5, minimum-scale=1" />
+
+    <title>Live Poll: Western Movies of the &#39;50s | IMDb.com Customer Community</title>
+
+    <link rel="shortcut icon" href="http://www.imdb.com/favicon.ico" type="image/x-icon" />
+
+    <base href="https://getsatisfaction.com/" />
+
+    <link href="https://ddrj41szzqhh2.cloudfront.net/imdb/stylesheets/0b69d54f98610aad5aff9b28fe6d9b94/application-8e07308ef08101fd3e77dadc533a5ccb.css" media="print, screen" rel="stylesheet" />
+    <link href="https://ddrj41szzqhh2.cloudfront.net/c-assets/frameworks/normalize-53e2aa205fadb68f20ffeb4060a50be6.css" media="print, screen" rel="stylesheet" />
+
+
+    <meta content="authenticity_token" name="csrf-param" />
+<meta content="XSijLGewZ4wBOC1snJj3tU+vWyvnH2FzvhpPRE/u8cQ=" name="csrf-token" />
+    
+    
+    
+    <link rel="canonical" href="https://getsatisfaction.com/imdb/topics/poll-suggestion-western-movies-of-the-50s" />
+
+    <meta property="request-method" content="GET" />
+    <meta property="sprite-server-url" content="https://d3mncy4iuai9kg.cloudfront.net" />
+    <meta property="company-id" content="16491" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Live Poll: Western Movies of the &#39;50s | IMDb.com Customer Community" />
+    <meta property="og:description" content="The popularity of the Western genre peaked in the 1950s. According to William Indick&#39;s book &#39;The Psychology of the Western&#39; (2008), the number of Western films produced in the 1950s outnumbered all other genres combined.Which Western movie of the 1950s is your favorite?My list: http://www.imdb.com/list/ls068997958/Poll: http://www.imdb.com/poll/pIW0FUWHi9k/ I included movies with at least 5.000 votes." />
+    <meta property="og:site_name" content="IMDb.com Community" />
+    <meta property="og:image" content="https://ddrj41szzqhh2.cloudfront.net/c-assets/icon-praise-9b5fc753663eb5b285031830362c9e95.png" />
+
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:title" content="Live Poll: Western Movies of the &#39;50s | IMDb.com Customer Community" />
+    <meta property="twitter:image" content="https://ddrj41szzqhh2.cloudfront.net/c-assets/icon-praise-9b5fc753663eb5b285031830362c9e95.png" />
+    <meta property="twitter:description" content="The popularity of the Western genre peaked in the 1950s. According to William Indick&#39;s book &#39;The Psychology of the Western&#39; (2008), the number of Western films produced in the 1950s outnumbered all other genres combined.Which Western movie of the 1950s is your favorite?My list: http://www.imdb.com/list/ls068997958/Poll: http://www.imdb.com/poll/pIW0FUWHi9k/ I included movies with at least 5.000 votes." />
+    <meta name="description" content="The popularity of the Western genre peaked in the 1950s. According to William Indick&#39;s book &#39;The Psychology of the Western&#39; (2008), the number of Western..." />
+
+    <link rel="apple-touch-icon" href="https://ddrj41szzqhh2.cloudfront.net/c-assets/default_homescreen_icon-fab6aa53cea4a2d1d0d2933cc76342c9.png" />
+
+
+        <meta content="2017-12-04T08:57:39+00:00" name="last-modified" />
+
+
+    <script>
+//<![CDATA[
+
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o);a.async=1;a.src=g;
+          s.head.appendChild(a)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+//]]>
+</script>
+    <script>
+//<![CDATA[
+
+      if (typeof GSFN == 'undefined') {
+        var GSFN = {};
+      }
+
+      GSFN.ComponentInitializers = [];
+      GSFN.app = {};
+
+//]]>
+</script>    <script src="https://ddrj41szzqhh2.cloudfront.net/c-assets/vendor/jquery-5c52f306e878a7408b5f735fe5a50fd2.js"></script>
+
+  </head>
+
+  <body class="no-touch companies-topics show">
+    <noscript id="deferred-styles">
+      <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" media="screen" rel="stylesheet" />
+      <link href="https://ddrj41szzqhh2.cloudfront.net/imdb/stylesheets/0b69d54f98610aad5aff9b28fe6d9b94/icons-473d50395408df101886c732235a41f8.css" media="print, screen" rel="stylesheet" />
+    </noscript>
+    <script>
+      var loadDeferredStyles = function() {
+        var addStylesNode = document.getElementById("deferred-styles");
+        var replacement = document.createElement("div");
+        replacement.innerHTML = addStylesNode.textContent;
+        document.body.appendChild(replacement)
+        addStylesNode.parentElement.removeChild(addStylesNode);
+      };
+      window.addEventListener('load', loadDeferredStyles);
+    </script>
+    <div class="component analytics-component" id="analytics">  <meta content="" data-account_id="UA-2005202-1" data-additional_params="" data-domain_name="getsatisfaction.com" data-tracker_name="oldTracker" data-type="Universal" name="analytics" />
+  <meta content="" data-account_id="UA-37581035-1" data-additional_params="" data-community_slug="imdb" data-domain_name="getsatisfaction.com" data-plan_slug="Enterprise Premium" data-topic_status="praise-nostatus" data-topic_type="praise" data-tracker_name="c2Tracker" data-type="Universal" data-user_role="anonymous" name="analytics" />
+</div><script>
+//<![CDATA[
+GSFN.ComponentInitializers.push(function () {
+        GSFN.app['analytics'] = new GSFN.Components['AnalyticsComponent']({"identifier":"analytics","options":{"wrapper":true,"view_name":"analytics_component","source_name":null,"javascript":true},"settings":{"gsfn_domain":"getsatisfaction.com"}});
+      })
+//]]>
+</script>
+
+    <div class="layout">
+      <div id="header">
+        <div class="component custom-component" id="custom-header">    <div class="tablet desktop">
+      <div class="component hero-component" id="community-info"><div class="container">
+    <div class="image">
+      <a href="/imdb"><img alt="Imdbsquarelogo large" src="https://d2r1vs3d9006ap.cloudfront.net/public/uploaded_images/9999862/imdbsquarelogo_large.png" width="52" /></a>
+    </div>
+
+  <div class="community-title">
+      <p class="supertitle">
+        Community powered support for
+      </p>
+
+    <a href="/imdb">IMDb.com</a>
+  </div>
+</div>
+</div>
+    </div>
+</div><script>
+//<![CDATA[
+GSFN.ComponentInitializers.push(function () {
+        GSFN.app['custom-header'] = new GSFN.Components['CustomComponent']({"identifier":"custom-header","options":{"wrapper":true,"view_name":"custom_component","source_name":null,"javascript":true},"settings":{"id":"d6e1419","type":"header","with_padding":false}});
+      })
+//]]>
+</script>
+      </div>
+
+        <div class="hud">
+            <div class="component hud-component" id="hud"><div class="content">
+  <div class="mobile-navigation dropdown">
+    <a class="trigger" href="#">
+      <i class="gs-icon-bars"></i>
+</a>
+    <ul>
+      <li class="form">
+          <div class="post">
+            <a class="button secondary" href="/imdb/topics/new">New Post</a>
+          </div>
+
+        <div class="search">
+          <form accept-charset="UTF-8" action="/imdb/topics/search/show" method="get"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+            <input id="search_keywords" name="search[keywords]" placeholder="Find or start a conversation" type="text" />
+            <button class="button gs-icon-search textless" name="button" type="submit"><span class="text">Search</span></button>
+</form>        </div>
+      </li>
+
+      <li>
+        <a href="/imdb">Community Home</a>
+      </li>
+
+        <li class=""><a href="/imdb/categories">Categories</a></li>
+
+      <li class=""><a href="/imdb/details">About</a></li>
+
+    </ul>
+  </div>
+
+  <div class="company-name">
+    <a href="/imdb">
+      IMDb.com
+</a>  </div>
+
+  <div class="site-navigation">
+    <ul>
+      <li class=""><a href="/imdb">
+        <i class="gs-icon-home big-on-desktop"></i>
+        &nbsp;Home
+</a></li>
+        <li class=""><a href="/imdb/categories">Categories</a></li>
+
+      <li class=""><a href="/imdb/details">About</a></li>
+
+    </ul>
+  </div>
+
+  <div class="user-controls">
+    <ul class="actions">
+        <li class="post">
+          <a class="button" href="/imdb/topics/new">New Post</a>
+        </li>
+
+      <li class="search">
+        <div class="component search-hud-component" id="community-search-hud"><form accept-charset="UTF-8" action="/imdb/topics/search/show" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="XSijLGewZ4wBOC1snJj3tU+vWyvnH2FzvhpPRE/u8cQ=" /></div>
+  <input id="search_default_category_id_hud" name="search[default_category_id]" type="hidden" />
+  <input class="search-keywords search_keywords" id="keywords_search_hud" name="search[keywords]" placeholder="Find or start a conversation" title="Find or start a conversation" type="text" />
+  <button aria-label="search" class="button gs-icon-search textless" name="button" type="submit"><span class="text">Go</span></button>
+</form></div>
+      </li>
+    </ul>
+
+    <div class="user-navigation">
+      <ul>
+          <li class="sign-in">
+            <a data-action="login" href="#">Sign In</a>
+          </li>
+          <li class="sign-up">
+            <a data-action="signUp" href="#">Register</a>
+          </li>
+
+      </ul>
+    </div>
+  </div>
+</div>
+</div><script>
+//<![CDATA[
+GSFN.ComponentInitializers.push(function () {
+        GSFN.app['hud'] = new GSFN.Components['HudComponent']({"identifier":"hud","options":{"wrapper":true,"view_name":"hud_component","source_name":null,"javascript":true},"settings":{"show_categories":true}});
+      })
+//]]>
+</script>
+        </div>
+
+
+
+      <!-- Readonly Banner -->
+      <div class="flash-banner">
+        <div class="component banner-component" id="flash-info"></div><script>
+//<![CDATA[
+GSFN.ComponentInitializers.push(function () {
+        GSFN.app['flash-info'] = new GSFN.Components['BannerComponent']({"identifier":"flash-info","options":{"wrapper":true,"view_name":"banner_component","source_name":"readonly_announcement","javascript":true,"autoinitialize":false,"is_sticky":false},"settings":{"message":null,"url":null,"icon":null,"id":null,"enabled":false,"type":"info"}});
+      })
+//]]>
+</script>
+      </div>
+
+
+        <div class="header with-sidebar">
+          <div class="container">
+            <div class="content">
+                <div class="component breadcrumbs-component" id="topic-breadcrumbs"><ul>
+    <li>
+          <a href="/imdb">Community Home</a>
+    </li>
+    <li>
+          <span class="pill">
+              <a href="/imdb/categories/imdb_imdb_poll">Services: IMDb Poll</a>
+          </span>
+
+    </li>
+</ul>
+</div><script>
+//<![CDATA[
+GSFN.ComponentInitializers.push(function () {
+        GSFN.app['topic-breadcrumbs'] = new GSFN.Components['BreadcrumbsComponent']({"identifier":"topic-breadcrumbs","options":{"wrapper":true,"view_name":"breadcrumbs_component","source_name":"topic","javascript":true},"settings":{"links":null}});
+      })
+//]]>
+</script>
+  <div class="component topic-header-component" id="topic-header"><div class="sticky">
+  <h1>
+    Live Poll: Western Movies of the &#39;50s
+
+  </h1>
+    <div class="component actions-component" id="actions-sticky-header"><ul class="sticky-action">
+  <li>
+    <div class="component me-too-action-component" id="topic-me-too-desktop-sticky">  <div class="button-container ">
+    <div>
+      <form accept-charset="UTF-8" action="/imdb/topics/poll-suggestion-western-movies-of-the-50s/me_toos" class="new_me_too" id="me-too-form-7558462-desktop-sticky" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="XSijLGewZ4wBOC1snJj3tU+vWyvnH2FzvhpPRE/u8cQ=" /></div>
+        <input id="me-too-7558462-desktop-sticky" name="me_too[topic_id]" type="hidden" value="7558462" />
+        <button class="primary button me-too-form " name="button" type="submit">
+          <i class="icon-like"></i>
+          <span class="inactive">Like</span>
+</button></form></div>
+    <div>
+      <form accept-charset="UTF-8" action="/imdb/topics/poll-suggestion-western-movies-of-the-50s/me_toos/not_nil" class="edit_me_too" id="unme-too-form-7558462-desktop-sticky" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="_method" type="hidden" value="delete" /><input name="authenticity_token" type="hidden" value="XSijLGewZ4wBOC1snJj3tU+vWyvnH2FzvhpPRE/u8cQ=" /></div>
+        <input id="unme-too-7558462-desktop-sticky" name="me_too[topic_id]" type="hidden" value="7558462" />
+        <button class="primary button un-me-too-form inactive" name="button" type="submit">
+          <i class="icon-unlike"></i>
+          <span class="inactive">Unlike</span>
+</button></form></div>  </div>
+
+  <div class="count-container inactive">
+    <a class="count unselected" data-action="displayUserList" data-scope-key="topic_id" data-scope-value="7558462" data-source="metooers" data-title="&lt;strong class=&#39;number&#39;&gt;3&lt;/strong&gt; people like this praise" href="#">3</a>
+  </div>
+</div><script>
+//<![CDATA[
+GSFN.ComponentInitializers.push(function () {
+        GSFN.app['topic-me-too-desktop-sticky'] = new GSFN.Components['MeTooActionComponent']({"identifier":"topic-me-too-desktop-sticky","options":{"wrapper":true,"view_name":"me_too_action_component","source_name":"topic","javascript":true},"settings":{"display_count":false,"button_color":"primary","show_label":false,"is_already_selected":null,"extra_identifier":"-desktop-sticky"}});
+      })
+//]]>
+</script>
+  </li>
+
+  <li>
+    <div class="component follow-action-component" id="topic-follow-desktop-sticky"><div class="topic-follow-container">
+  <div class="button-container  " data-following="false">
+    <div>
+      <form accept-charset="UTF-8" action="/imdb/topics/poll-suggestion-western-movies-of-the-50s/follows" class="new_follow" id="follow-form-7558462-desktop-sticky" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="XSijLGewZ4wBOC1snJj3tU+vWyvnH2FzvhpPRE/u8cQ=" /></div>
+        <input id="follow-item-7558462-desktop-sticky" name="follow[item_to_follow_id]" type="hidden" value="7558462" />
+        <button class="primary button follow-form " id="follow-7558462-button-desktop-sticky" name="button" type="submit">
+          <i class="icon-follow"></i>
+          <span class="inactive">Follow</span>
+</button>
+</form></div>
+    <div>
+      <form accept-charset="UTF-8" action="/imdb/topics/poll-suggestion-western-movies-of-the-50s/follows/not_nil" class="edit_follow" id="unfollow-form-7558462-desktop-sticky" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="_method" type="hidden" value="delete" /><input name="authenticity_token" type="hidden" value="XSijLGewZ4wBOC1snJj3tU+vWyvnH2FzvhpPRE/u8cQ=" /></div>
+        <input id="unfollow-item-7558462-desktop-sticky" name="follow[item_to_follow_id]" type="hidden" value="7558462" />
+        <button class="primary button unfollow-form inactive" id="unfollow-7558462-button-desktop-sticky" name="button" type="submit">
+          <i class="icon-unfollow"></i>
+          <span class="inactive">Unfollow</span>
+</button></form></div>  </div>
+
+  <div class="count-container inactive">
+    <a class="count unselected" data-action="displayUserList" data-scope-key="topic_id" data-scope-value="7558462" data-source="followers" data-title="&lt;strong class=&#39;number&#39;&gt;9&lt;/strong&gt; people follow this praise" href="#">9</a>
+  </div>
+</div>
+</div><script>
+//<![CDATA[
+GSFN.ComponentInitializers.push(function () {
+        GSFN.app['topic-follow-desktop-sticky'] = new GSFN.Components['FollowActionComponent']({"identifier":"topic-follow-desktop-sticky","options":{"wrapper":true,"view_name":"follow_action_component","source_name":"topic","javascript":true},"settings":{"display_follower_count_text":null,"layout":"vertical","button_color":"primary","button_size":"large","force_follow_selected":false,"follower_count":null,"display_count":false,"show_label":false,"item_to_follow":null,"item_to_follow_id":null,"is_already_following":false,"analytics":null,"sync_full_page":true,"extra_identifier":"-desktop-sticky"}});
+      })
+//]]>
+</script>
+  </li>
+</ul>
+</div>
+</div>
+
+<ul class="meta">
+  <li class="type">
+    <i class="gs-icon-heart"></i>
+    Praise
+  </li>
+
+  <li class="last-activity" title="December 1, 2017 at 4:10:31 PM UTC">
+      Updated 3 days ago
+</li>
+
+
+      <li class="topic-changed edited">
+        (Edited)
+      </li>
+</ul>
+</div><script>
+//<![CDATA[
+GSFN.ComponentInitializers.push(function () {
+        GSFN.app['topic-header'] = new GSFN.Components['TopicHeaderComponent']({"identifier":"topic-header","options":{"wrapper":true,"view_name":"topic_header_component","source_name":null,"javascript":true},"settings":{"button_options":{"device":"desktop","follow_action_options":{"source_name":"topic","settings":{"display_count":false,"show_label":false}},"me_too_action_options":{"source_name":"topic","settings":{"display_count":false,"show_label":false}},"helpful_action_options":{"source_name":"topic","settings":{"display_count":false,"show_label":false}}}}});
+      })
+//]]>
+</script>
+
+            </div>
+
+              <div class="sidebar">
+                  <div class="desktop">
+    <div class="component actions-component" id="actions-desktop"><ul class="">
+  <li>
+    <div class="component me-too-action-component" id="topic-me-too-desktop">  <div class="button-container with-count">
+    <div>
+      <form accept-charset="UTF-8" action="/imdb/topics/poll-suggestion-western-movies-of-the-50s/me_toos" class="new_me_too" id="me-too-form-7558462-desktop" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="XSijLGewZ4wBOC1snJj3tU+vWyvnH2FzvhpPRE/u8cQ=" /></div>
+        <input id="me-too-7558462-desktop" name="me_too[topic_id]" type="hidden" value="7558462" />
+        <button class="primary button me-too-form " name="button" type="submit">
+          <i class="icon-like"></i>
+          <span class="">Like</span>
+</button></form></div>
+    <div>
+      <form accept-charset="UTF-8" action="/imdb/topics/poll-suggestion-western-movies-of-the-50s/me_toos/not_nil" class="edit_me_too" id="unme-too-form-7558462-desktop" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="_method" type="hidden" value="delete" /><input name="authenticity_token" type="hidden" value="XSijLGewZ4wBOC1snJj3tU+vWyvnH2FzvhpPRE/u8cQ=" /></div>
+        <input id="unme-too-7558462-desktop" name="me_too[topic_id]" type="hidden" value="7558462" />
+        <button class="primary button un-me-too-form inactive" name="button" type="submit">
+          <i class="icon-unlike"></i>
+          <span class="">Unlike</span>
+</button></form></div>  </div>
+
+  <div class="count-container ">
+    <a class="count unselected" data-action="displayUserList" data-scope-key="topic_id" data-scope-value="7558462" data-source="metooers" data-title="&lt;strong class=&#39;number&#39;&gt;3&lt;/strong&gt; people like this praise" href="#">3</a>
+  </div>
+</div><script>
+//<![CDATA[
+GSFN.ComponentInitializers.push(function () {
+        GSFN.app['topic-me-too-desktop'] = new GSFN.Components['MeTooActionComponent']({"identifier":"topic-me-too-desktop","options":{"wrapper":true,"view_name":"me_too_action_component","source_name":"topic","javascript":true},"settings":{"display_count":true,"button_color":"primary","show_label":true,"is_already_selected":null,"extra_identifier":"-desktop"}});
+      })
+//]]>
+</script>
+  </li>
+
+  <li>
+    <div class="component follow-action-component" id="topic-follow-desktop"><div class="topic-follow-container">
+  <div class="button-container  with-count" data-following="false">
+    <div>
+      <form accept-charset="UTF-8" action="/imdb/topics/poll-suggestion-western-movies-of-the-50s/follows" class="new_follow" id="follow-form-7558462-desktop" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="XSijLGewZ4wBOC1snJj3tU+vWyvnH2FzvhpPRE/u8cQ=" /></div>
+        <input id="follow-item-7558462-desktop" name="follow[item_to_follow_id]" type="hidden" value="7558462" />
+        <button class="primary button follow-form " id="follow-7558462-button-desktop" name="button" type="submit">
+          <i class="icon-follow"></i>
+          <span class="">Follow</span>
+</button>
+</form></div>
+    <div>
+      <form accept-charset="UTF-8" action="/imdb/topics/poll-suggestion-western-movies-of-the-50s/follows/not_nil" class="edit_follow" id="unfollow-form-7558462-desktop" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="_method" type="hidden" value="delete" /><input name="authenticity_token" type="hidden" value="XSijLGewZ4wBOC1snJj3tU+vWyvnH2FzvhpPRE/u8cQ=" /></div>
+        <input id="unfollow-item-7558462-desktop" name="follow[item_to_follow_id]" type="hidden" value="7558462" />
+        <button class="primary button unfollow-form inactive" id="unfollow-7558462-button-desktop" name="button" type="submit">
+          <i class="icon-unfollow"></i>
+          <span class="">Unfollow</span>
+</button></form></div>  </div>
+
+  <div class="count-container ">
+    <a class="count unselected" data-action="displayUserList" data-scope-key="topic_id" data-scope-value="7558462" data-source="followers" data-title="&lt;strong class=&#39;number&#39;&gt;9&lt;/strong&gt; people follow this praise" href="#">9</a>
+  </div>
+</div>
+</div><script>
+//<![CDATA[
+GSFN.ComponentInitializers.push(function () {
+        GSFN.app['topic-follow-desktop'] = new GSFN.Components['FollowActionComponent']({"identifier":"topic-follow-desktop","options":{"wrapper":true,"view_name":"follow_action_component","source_name":"topic","javascript":true},"settings":{"display_follower_count_text":null,"layout":"vertical","button_color":"primary","button_size":"large","force_follow_selected":false,"follower_count":null,"display_count":true,"show_label":true,"item_to_follow":null,"item_to_follow_id":null,"is_already_following":false,"analytics":null,"sync_full_page":true,"extra_identifier":"-desktop"}});
+      })
+//]]>
+</script>
+  </li>
+</ul>
+</div>
+  </div>
+
+              </div>
+          </div>
+        </div>
+
+      <div class="main with-sidebar">
+        <div class="container">
+
+
+
+          <div class="content">
+              <div class="component topic-state-component" id="topic-state"></div>
+  <div class="component user-generated-content-component" id="topic-content"><div class="user-generated-content">
+  The popularity of the Western genre peaked in the 1950s. According to William Indick's book 'The Psychology of the Western' (2008), the number of Western films produced in the 1950s outnumbered all other genres combined.<br><br>Which Western movie of the 1950s is your favorite?<br><br>My list: <a href="http://www.imdb.com/list/ls068997958/" rel="nofollow" target="_blank">http://www.imdb.com/list/ls068997958/</a><br>Poll: <a href="http://www.imdb.com/poll/pIW0FUWHi9k/" rel="nofollow">http://www.imdb.com/poll/pIW0FUWHi9k/</a> <br><br>I included movies with at least 5.000 votes.
+</div>
+</div>
+
+  <div class="author-container">
+    <div class="pull-left">
+      <div class="component author-component" id="topic-author"><div class="unranked standalone" data-rank="null">
+  <div class='avatar avatar-and-details'>
+      <div class="image image-user">
+        <a data-action="displayProfileSummary" data-user-id="8936879" href="https://getsatisfaction.com/imdb/people/roy_k7aqttv48ox8z"><div class="avatar relative-positioning"><img alt="Photo of Hoekkie" data-src="https://d2r1vs3d9006ap.cloudfront.net/public/uploaded_images/11014858/image_large.jpg" src="https://ddrj41szzqhh2.cloudfront.net/c-assets/user_default_large-2e287ec1b49ca3bff41ef32c7a9a09fd.png" style="width: 60px; height: 60px" /></div></a>
+      </div>
+
+    <div class="user">
+      <div class="highlighted-details">
+          <p>
+            
+              <a data-action="displayProfileSummary" data-user-id="8936879" href="https://getsatisfaction.com/imdb/people/roy_k7aqttv48ox8z">Hoekkie</a>
+          </p>
+
+          <ul class="meta">
+              <li>
+                434 Posts
+              </li>
+
+              <li>
+                64 Reply Likes
+              </li>
+
+
+          </ul>
+      </div>
+        <div class="extra">
+          <p title="July 19, 2017 at 10:40:33 PM UTC">Posted 5 months ago</p>
+        </div>
+    </div>
+  </div>
+</div></div>
+    </div>
+
+    <div class="tablet desktop pull-right add-this">
+      <div class="component sharing-component" id="topic-sharing-desktop"></div>
+      <script>
+//<![CDATA[
+
+        $.ajax({
+          method: "GET",
+          url: "/imdb/topics/7558462/sharing_links",
+          success: function(data){
+            $('#topic-sharing-desktop').html(data);
+          }
+        });
+
+//]]>
+</script>    </div>
+  </div>
+
+  <div class="clearfix"></div>
+
+  <div class="component navigation-component" id="topic-manage"></div>
+
+  <div class="mobile">
+    <div class="component actions-component" id="actions-mobile"><ul class="">
+  <li>
+    <div class="component me-too-action-component" id="topic-me-too-mobile">  <div class="button-container with-count">
+    <div>
+      <form accept-charset="UTF-8" action="/imdb/topics/poll-suggestion-western-movies-of-the-50s/me_toos" class="new_me_too" id="me-too-form-7558462-mobile" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="XSijLGewZ4wBOC1snJj3tU+vWyvnH2FzvhpPRE/u8cQ=" /></div>
+        <input id="me-too-7558462-mobile" name="me_too[topic_id]" type="hidden" value="7558462" />
+        <button class="primary button me-too-form " name="button" type="submit">
+          <i class="icon-like"></i>
+          <span class="">Like</span>
+</button></form></div>
+    <div>
+      <form accept-charset="UTF-8" action="/imdb/topics/poll-suggestion-western-movies-of-the-50s/me_toos/not_nil" class="edit_me_too" id="unme-too-form-7558462-mobile" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="_method" type="hidden" value="delete" /><input name="authenticity_token" type="hidden" value="XSijLGewZ4wBOC1snJj3tU+vWyvnH2FzvhpPRE/u8cQ=" /></div>
+        <input id="unme-too-7558462-mobile" name="me_too[topic_id]" type="hidden" value="7558462" />
+        <button class="primary button un-me-too-form inactive" name="button" type="submit">
+          <i class="icon-unlike"></i>
+          <span class="">Unlike</span>
+</button></form></div>  </div>
+
+  <div class="count-container ">
+    <a class="count unselected" data-action="displayUserList" data-scope-key="topic_id" data-scope-value="7558462" data-source="metooers" data-title="&lt;strong class=&#39;number&#39;&gt;3&lt;/strong&gt; people like this praise" href="#">3</a>
+  </div>
+</div><script>
+//<![CDATA[
+GSFN.ComponentInitializers.push(function () {
+        GSFN.app['topic-me-too-mobile'] = new GSFN.Components['MeTooActionComponent']({"identifier":"topic-me-too-mobile","options":{"wrapper":true,"view_name":"me_too_action_component","source_name":"topic","javascript":true},"settings":{"display_count":true,"button_color":"primary","show_label":true,"is_already_selected":null,"extra_identifier":"-mobile"}});
+      })
+//]]>
+</script>
+  </li>
+
+  <li>
+    <div class="component follow-action-component" id="topic-follow-mobile"><div class="topic-follow-container">
+  <div class="button-container  with-count" data-following="false">
+    <div>
+      <form accept-charset="UTF-8" action="/imdb/topics/poll-suggestion-western-movies-of-the-50s/follows" class="new_follow" id="follow-form-7558462-mobile" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="XSijLGewZ4wBOC1snJj3tU+vWyvnH2FzvhpPRE/u8cQ=" /></div>
+        <input id="follow-item-7558462-mobile" name="follow[item_to_follow_id]" type="hidden" value="7558462" />
+        <button class="primary button follow-form " id="follow-7558462-button-mobile" name="button" type="submit">
+          <i class="icon-follow"></i>
+          <span class="">Follow</span>
+</button>
+</form></div>
+    <div>
+      <form accept-charset="UTF-8" action="/imdb/topics/poll-suggestion-western-movies-of-the-50s/follows/not_nil" class="edit_follow" id="unfollow-form-7558462-mobile" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="_method" type="hidden" value="delete" /><input name="authenticity_token" type="hidden" value="XSijLGewZ4wBOC1snJj3tU+vWyvnH2FzvhpPRE/u8cQ=" /></div>
+        <input id="unfollow-item-7558462-mobile" name="follow[item_to_follow_id]" type="hidden" value="7558462" />
+        <button class="primary button unfollow-form inactive" id="unfollow-7558462-button-mobile" name="button" type="submit">
+          <i class="icon-unfollow"></i>
+          <span class="">Unfollow</span>
+</button></form></div>  </div>
+
+  <div class="count-container ">
+    <a class="count unselected" data-action="displayUserList" data-scope-key="topic_id" data-scope-value="7558462" data-source="followers" data-title="&lt;strong class=&#39;number&#39;&gt;9&lt;/strong&gt; people follow this praise" href="#">9</a>
+  </div>
+</div>
+</div><script>
+//<![CDATA[
+GSFN.ComponentInitializers.push(function () {
+        GSFN.app['topic-follow-mobile'] = new GSFN.Components['FollowActionComponent']({"identifier":"topic-follow-mobile","options":{"wrapper":true,"view_name":"follow_action_component","source_name":"topic","javascript":true},"settings":{"display_follower_count_text":null,"layout":"vertical","button_color":"primary","button_size":"large","force_follow_selected":false,"follower_count":null,"display_count":true,"show_label":true,"item_to_follow":null,"item_to_follow_id":null,"is_already_following":false,"analytics":null,"sync_full_page":true,"extra_identifier":"-mobile"}});
+      })
+//]]>
+</script>
+  </li>
+</ul>
+</div>
+
+    <div class="center">
+      <div class="component sharing-component" id="topic-sharing-mobile">  <div addthis:url="https://getsatisfaction.com/imdb/topics/poll-suggestion-western-movies-of-the-50s" class="addthis_toolbox addthis_default_style addthis_32x32_style" data-addthis-options="{&quot;TopicTitle&quot;:&quot;Live Poll: Western Movies of the &#39;50s&quot;,&quot;TopicAuthorName&quot;:&quot;Hoekkie&quot;,&quot;TopicAuthorUrl&quot;:&quot;https://getsatisfaction.com/people/roy_k7aqttv48ox8z&quot;,&quot;CommunityName&quot;:&quot;IMDb.com&quot;,&quot;CommunityUrl&quot;:&quot;https://getsatisfaction.com/imdb&quot;}">
+    <a class="addthis_button_facebook"></a>
+    <a class="addthis_button_twitter"></a>
+    <a class="addthis_button_google_plusone_share"></a>
+    <a class="addthis_button_email"></a>
+    <a class="addthis_button_compact"></a>
+    <a class="addthis_counter addthis_bubble_style"></a>
+</div></div><script>
+//<![CDATA[
+GSFN.ComponentInitializers.push(function () {
+        GSFN.app['topic-sharing-mobile'] = new GSFN.Components['SharingComponent']({"identifier":"topic-sharing-mobile","options":{"wrapper":true,"view_name":"sharing_component","source_name":null,"javascript":true},"settings":{"large":true}});
+      })
+//]]>
+</script>
+    </div>
+  </div>
+
+  <div class="component reply-list-component" id="topic-reply-list">  <div class="navigation truncate">
+    <ul>
+        <li class="selected">
+          <a href="/imdb/topics/poll-suggestion-western-movies-of-the-50s?topic-reply-list%5Bsettings%5D%5Bfilter_by%5D=all">All 10 Replies</a>
+        </li>
+    </ul>
+  </div>
+
+
+    <div class="component reply-component" id="reply_18816339"><div class="timestamp">
+  <a href="/imdb/topics/poll-suggestion-western-movies-of-the-50s?topic-reply-list[settings][filter_by]=all&topic-reply-list[settings][reply_id]=18816339#reply_18816339" title="July 20, 2017 at 6:44:29 AM UTC">5 months ago</a>
+</div>
+
+  <div class="component author-component" id="reply-18816339-author"><div class="unranked with-timestamp standalone" data-rank="null">
+  <div class='avatar avatar-and-details'>
+      <div class="image image-user">
+        <a data-action="displayProfileSummary" data-user-id="8970360" href="https://getsatisfaction.com/imdb/people/sdk_elmaruecan_axg1z10yvc66p"><div class="avatar relative-positioning"><img alt="Photo of Sdk ElMaruecan" data-src="https://d2r1vs3d9006ap.cloudfront.net/public/uploaded_images/11075249/dessin_large.png" src="https://ddrj41szzqhh2.cloudfront.net/c-assets/user_default_large-2e287ec1b49ca3bff41ef32c7a9a09fd.png" style="width: 60px; height: 60px" /></div></a>
+      </div>
+
+    <div class="user">
+      <div class="highlighted-details">
+          <p>
+            
+              <a data-action="displayProfileSummary" data-user-id="8970360" href="https://getsatisfaction.com/imdb/people/sdk_elmaruecan_axg1z10yvc66p">Sdk ElMaruecan</a>
+          </p>
+
+          <ul class="meta">
+              <li>
+                1021 Posts
+              </li>
+
+              <li>
+                308 Reply Likes
+              </li>
+
+
+          </ul>
+      </div>
+    </div>
+  </div>
+</div></div>
+
+
+<div class="clearfix"></div>
+
+<div class="reply-content">
+  <div class="user-generated-content">Do not forsake me oh my darling...</div>
+
+  <div class="actions clearfix">
+    <ul class="meta">
+        <li>
+          <form accept-charset="UTF-8" action="/imdb/replies/18816339/like" class="new_like" id="new_like" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="XSijLGewZ4wBOC1snJj3tU+vWyvnH2FzvhpPRE/u8cQ=" /></div>
+            <input id="like_topic_id" name="like[topic_id]" type="hidden" value="7558462" />
+            <input id="like_reply_id" name="like[reply_id]" type="hidden" value="18816339" />
+            <button class="button" name="button" title="0 Reply Likes" type="submit">Like</button>
+</form>        </li>
+
+        <li>
+          <a class="button" data-action="composeComment" data-reply-id="18816339" href="#">Comment</a>
+        </li>
+
+    </ul>
+  </div>
+
+  <div class="resources">
+    <div class="likes" style="display: none;">
+      <ul>
+        <li class="gs-icon-star ">
+          <a class="count" data-action="displayUserList" data-scope-key="reply_id" data-scope-value="18816339" data-source="starers" data-title="<span class='count'>0</span> people like this" href="#"><span class='count'>0</span> people like this</a>
+        </li>
+      </ul>
+</div>
+      <div class="comments">
+        <div class="component comment-list-component" id="reply-comment-list-18816339">
+    <div class="component comment-component" id="reply_18819537"><input name="comment-id" type="hidden" value="18819537" />
+
+<div class="timestamp">
+  <a class="muted" href="/imdb/topics/poll-suggestion-western-movies-of-the-50s?topic-reply-list[settings][filter_by]=all&topic-reply-list[settings][reply_id]=18819537#reply_18819537" title="July 21, 2017 at 1:31:00 PM UTC">2017-07-21T13:31:00+00:00</a>
+</div>
+
+  <div class="component author-component" id="comment-18819537-author"><div class="unranked with-timestamp standalone" data-rank="null">
+  <div class='avatar avatar-and-details'>
+      <div class="image image-user">
+        <a data-action="displayProfileSummary" data-user-id="8936879" href="https://getsatisfaction.com/imdb/people/roy_k7aqttv48ox8z"><div class="avatar relative-positioning"><img alt="Photo of Hoekkie" data-src="https://d2r1vs3d9006ap.cloudfront.net/public/uploaded_images/11014858/image_large.jpg" src="https://ddrj41szzqhh2.cloudfront.net/c-assets/user_default_medium-7d2a56861a28b1de2875b27250ffeaf8.png" style="width: 36px; height: 36px" /></div></a>
+      </div>
+
+    <div class="user">
+      <div class="highlighted-details">
+          <p>
+            
+              <a data-action="displayProfileSummary" data-user-id="8936879" href="https://getsatisfaction.com/imdb/people/roy_k7aqttv48ox8z">Hoekkie</a>
+          </p>
+
+          <ul class="meta">
+              <li>
+                434 Posts
+              </li>
+
+              <li>
+                64 Reply Likes
+              </li>
+
+
+          </ul>
+      </div>
+    </div>
+  </div>
+</div></div>
+
+<div class="clearfix"></div>
+
+<div class="comment-content">
+  <div class="user-generated-content">I had to use Google to know what you meant, but High Noon is a great movie. I think my vote as well</div>
+
+  <div class="actions clearfix">
+    <ul class="meta">
+        <li>
+          <form accept-charset="UTF-8" action="/imdb/replies/18819537/like" class="new_comment_like" id="new_like" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="XSijLGewZ4wBOC1snJj3tU+vWyvnH2FzvhpPRE/u8cQ=" /></div>
+            <input id="like_topic_id" name="like[topic_id]" type="hidden" value="7558462" />
+            <input id="like_reply_id" name="like[reply_id]" type="hidden" value="18819537" />
+            <button class="button" name="button" title="0 likes" type="submit">Like</button>
+</form>        </li>
+
+
+      <li class="likes" style="display: none;">
+        <span class="gs-icon-star ">
+          <a class="count" data-action="displayUserList" data-scope-key="reply_id" data-scope-value="18819537" data-source="starers" data-title="<span class='count'>0</span> people like this" href="#">0</a>
+        </span>
+      </li>
+    </ul>
+  </div>
+</div>
+</div><script>
+//<![CDATA[
+GSFN.ComponentInitializers.push(function () {
+        GSFN.app['reply_18819537'] = new GSFN.Components['CommentComponent']({"identifier":"reply_18819537","options":{"wrapper":true,"view_name":"comment_component","source_name":null,"javascript":true,"cache_key":"comment-18819537-1500643864-0-0"},"settings":{"reply_id":18816339,"comment_id":18819537}});
+      })
+//]]>
+</script>
+    <div class="component comment-component" id="reply_19133707"><input name="comment-id" type="hidden" value="19133707" />
+
+<div class="timestamp">
+  <a class="muted" href="/imdb/topics/poll-suggestion-western-movies-of-the-50s?topic-reply-list[settings][filter_by]=all&topic-reply-list[settings][reply_id]=19133707#reply_19133707" title="December 1, 2017 at 3:06:59 PM UTC">2017-12-01T15:06:59+00:00</a>
+</div>
+
+  <div class="component author-component" id="comment-19133707-author"><div class="unranked with-timestamp standalone" data-rank="null">
+  <div class='avatar avatar-and-details'>
+      <div class="image image-user">
+        <a data-action="displayProfileSummary" data-user-id="9415471" href="https://getsatisfaction.com/imdb/people/hendricus_jansen"><div class="avatar relative-positioning"><img alt="Photo of Hendricus Jansen" data-src="https://d2r1vs3d9006ap.cloudfront.net/public/uploaded_images/11187041/1376603_630636170291305_508800122_n_large.jpg" src="https://ddrj41szzqhh2.cloudfront.net/c-assets/user_default_medium-7d2a56861a28b1de2875b27250ffeaf8.png" style="width: 36px; height: 36px" /></div></a>
+      </div>
+
+    <div class="user">
+      <div class="highlighted-details">
+          <p>
+            
+              <a data-action="displayProfileSummary" data-user-id="9415471" href="https://getsatisfaction.com/imdb/people/hendricus_jansen">Hendricus Jansen</a>
+          </p>
+
+          <ul class="meta">
+              <li>
+                1 Post
+              </li>
+
+              <li>
+                0 Reply Likes
+              </li>
+
+
+          </ul>
+      </div>
+    </div>
+  </div>
+</div></div>
+
+<div class="clearfix"></div>
+
+<div class="comment-content">
+  <div class="user-generated-content">I can'tbelieve that The Magnificent Seven isn't onthat list.</div>
+
+  <div class="actions clearfix">
+    <ul class="meta">
+        <li>
+          <form accept-charset="UTF-8" action="/imdb/replies/19133707/like" class="new_comment_like" id="new_like" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="XSijLGewZ4wBOC1snJj3tU+vWyvnH2FzvhpPRE/u8cQ=" /></div>
+            <input id="like_topic_id" name="like[topic_id]" type="hidden" value="7558462" />
+            <input id="like_reply_id" name="like[reply_id]" type="hidden" value="19133707" />
+            <button class="button" name="button" title="0 likes" type="submit">Like</button>
+</form>        </li>
+
+
+      <li class="likes" style="display: none;">
+        <span class="gs-icon-star ">
+          <a class="count" data-action="displayUserList" data-scope-key="reply_id" data-scope-value="19133707" data-source="starers" data-title="<span class='count'>0</span> people like this" href="#">0</a>
+        </span>
+      </li>
+    </ul>
+  </div>
+</div>
+</div><script>
+//<![CDATA[
+GSFN.ComponentInitializers.push(function () {
+        GSFN.app['reply_19133707'] = new GSFN.Components['CommentComponent']({"identifier":"reply_19133707","options":{"wrapper":true,"view_name":"comment_component","source_name":null,"javascript":true,"cache_key":"comment-19133707-1512140821-0-0"},"settings":{"reply_id":18816339,"comment_id":19133707}});
+      })
+//]]>
+</script>
+    <div class="component comment-component" id="reply_19133882"><input name="comment-id" type="hidden" value="19133882" />
+
+<div class="timestamp">
+  <a class="muted" href="/imdb/topics/poll-suggestion-western-movies-of-the-50s?topic-reply-list[settings][filter_by]=all&topic-reply-list[settings][reply_id]=19133882#reply_19133882" title="December 1, 2017 at 4:10:31 PM UTC">2017-12-01T16:10:31+00:00</a>
+</div>
+
+  <div class="component author-component" id="comment-19133882-author"><div class="unranked with-timestamp standalone" data-rank="null">
+  <div class='avatar avatar-and-details'>
+      <div class="image image-user">
+        <a data-action="displayProfileSummary" data-user-id="8936879" href="https://getsatisfaction.com/imdb/people/roy_k7aqttv48ox8z"><div class="avatar relative-positioning"><img alt="Photo of Hoekkie" data-src="https://d2r1vs3d9006ap.cloudfront.net/public/uploaded_images/11014858/image_large.jpg" src="https://ddrj41szzqhh2.cloudfront.net/c-assets/user_default_medium-7d2a56861a28b1de2875b27250ffeaf8.png" style="width: 36px; height: 36px" /></div></a>
+      </div>
+
+    <div class="user">
+      <div class="highlighted-details">
+          <p>
+            
+              <a data-action="displayProfileSummary" data-user-id="8936879" href="https://getsatisfaction.com/imdb/people/roy_k7aqttv48ox8z">Hoekkie</a>
+          </p>
+
+          <ul class="meta">
+              <li>
+                434 Posts
+              </li>
+
+              <li>
+                64 Reply Likes
+              </li>
+
+
+          </ul>
+      </div>
+    </div>
+  </div>
+</div></div>
+
+<div class="clearfix"></div>
+
+<div class="comment-content">
+  <div class="user-generated-content">That movie is from 1960.</div>
+
+  <div class="actions clearfix">
+    <ul class="meta">
+        <li>
+          <form accept-charset="UTF-8" action="/imdb/replies/19133882/like" class="new_comment_like" id="new_like" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="XSijLGewZ4wBOC1snJj3tU+vWyvnH2FzvhpPRE/u8cQ=" /></div>
+            <input id="like_topic_id" name="like[topic_id]" type="hidden" value="7558462" />
+            <input id="like_reply_id" name="like[reply_id]" type="hidden" value="19133882" />
+            <button class="button" name="button" title="0 likes" type="submit">Like</button>
+</form>        </li>
+
+
+      <li class="likes" style="display: none;">
+        <span class="gs-icon-star ">
+          <a class="count" data-action="displayUserList" data-scope-key="reply_id" data-scope-value="19133882" data-source="starers" data-title="<span class='count'>0</span> people like this" href="#">0</a>
+        </span>
+      </li>
+    </ul>
+  </div>
+</div>
+</div><script>
+//<![CDATA[
+GSFN.ComponentInitializers.push(function () {
+        GSFN.app['reply_19133882'] = new GSFN.Components['CommentComponent']({"identifier":"reply_19133882","options":{"wrapper":true,"view_name":"comment_component","source_name":null,"javascript":true,"cache_key":"comment-19133882-1512144634-0-0"},"settings":{"reply_id":18816339,"comment_id":19133882}});
+      })
+//]]>
+</script>
+
+
+  <div class="comment-form">
+    <form accept-charset="UTF-8" action="/imdb/replies/18816339/comments" class="new_comment" id="new_comment" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="XSijLGewZ4wBOC1snJj3tU+vWyvnH2FzvhpPRE/u8cQ=" /></div>
+      <div class="input">
+        <textarea id="compose-comment-18816339" name="comment[content]" placeholder="Write a comment" rows="1">
+</textarea>
+        <input id="comment_parent_id" name="comment[parent_id]" type="hidden" value="18816339" />
+        <input id="comment_preserve_whitespace" name="comment[preserve_whitespace]" type="hidden" />
+      </div>
+
+      <div class="form-actions">
+        <button class="button primary small" name="button" type="submit">Submit</button>
+        <button class="button link small cancel" name="cancel" type="submit">Cancel</button>
+      </div>
+</form>  </div>
+</div><script>
+//<![CDATA[
+GSFN.ComponentInitializers.push(function () {
+        GSFN.app['reply-comment-list-18816339'] = new GSFN.Components['CommentListComponent']({"identifier":"reply-comment-list-18816339","options":{"wrapper":true,"view_name":"comment_list_component","source_name":null,"javascript":true},"settings":{"reply_id":18816339,"deep_linked":false,"limit":5,"page":1}});
+      })
+//]]>
+</script>
+      </div>
+  </div>
+</div>
+</div><script>
+//<![CDATA[
+GSFN.ComponentInitializers.push(function () {
+        GSFN.app['reply_18816339'] = new GSFN.Components['ReplyComponent']({"identifier":"reply_18816339","options":{"wrapper":true,"view_name":"reply_component","source_name":null,"javascript":true},"settings":{"reply_id":18816339,"allow_comments":true,"show_comment_list":true,"deep_linked":false}});
+      })
+//]]>
+</script>
+    <div class="component reply-component" id="reply_18818966"><div class="timestamp">
+  <a href="/imdb/topics/poll-suggestion-western-movies-of-the-50s?topic-reply-list[settings][filter_by]=all&topic-reply-list[settings][reply_id]=18818966#reply_18818966" title="July 21, 2017 at 6:16:57 AM UTC">4 months ago</a>
+</div>
+
+  <div class="component author-component" id="reply-18818966-author"><div class="unranked with-timestamp standalone" data-rank="null">
+  <div class='avatar avatar-and-details'>
+      <div class="image image-user">
+        <a data-action="displayProfileSummary" data-user-id="8928080" href="https://getsatisfaction.com/imdb/people/shawn_longway"><div class="avatar relative-positioning"><img alt="Photo of urbanemovies" data-src="https://d2r1vs3d9006ap.cloudfront.net/public/uploaded_images/11144381/monkey-selfie_large.jpg" src="https://ddrj41szzqhh2.cloudfront.net/c-assets/user_default_large-2e287ec1b49ca3bff41ef32c7a9a09fd.png" style="width: 60px; height: 60px" /></div></a>
+      </div>
+
+    <div class="user">
+      <div class="highlighted-details">
+          <p>
+            
+              <a data-action="displayProfileSummary" data-user-id="8928080" href="https://getsatisfaction.com/imdb/people/shawn_longway">urbanemovies</a>
+          </p>
+
+          <ul class="meta">
+              <li>
+                1460 Posts
+              </li>
+
+              <li>
+                234 Reply Likes
+              </li>
+
+
+          </ul>
+      </div>
+    </div>
+  </div>
+</div></div>
+
+
+<div class="clearfix"></div>
+
+<div class="reply-content">
+  <div class="user-generated-content"><a href="http://www.imdb.com/title/tt0049730/" rel="nofollow" target="_blank" title="Link http//wwwimdbcom/title/tt0049730/">The Searchers</a>  deep pool of candidates on this poll suggestion.</div>
+
+  <div class="actions clearfix">
+    <ul class="meta">
+        <li>
+          <form accept-charset="UTF-8" action="/imdb/replies/18818966/like" class="new_like" id="new_like" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="XSijLGewZ4wBOC1snJj3tU+vWyvnH2FzvhpPRE/u8cQ=" /></div>
+            <input id="like_topic_id" name="like[topic_id]" type="hidden" value="7558462" />
+            <input id="like_reply_id" name="like[reply_id]" type="hidden" value="18818966" />
+            <button class="button" name="button" title="0 Reply Likes" type="submit">Like</button>
+</form>        </li>
+
+        <li>
+          <a class="button" data-action="composeComment" data-reply-id="18818966" href="#">Comment</a>
+        </li>
+
+    </ul>
+  </div>
+
+  <div class="resources">
+    <div class="likes" style="display: none;">
+      <ul>
+        <li class="gs-icon-star ">
+          <a class="count" data-action="displayUserList" data-scope-key="reply_id" data-scope-value="18818966" data-source="starers" data-title="<span class='count'>0</span> people like this" href="#"><span class='count'>0</span> people like this</a>
+        </li>
+      </ul>
+</div>
+      <div class="comments">
+        <div class="component comment-list-component" id="reply-comment-list-18818966">
+    <div class="component comment-component" id="reply_18819540"><input name="comment-id" type="hidden" value="18819540" />
+
+<div class="timestamp">
+  <a class="muted" href="/imdb/topics/poll-suggestion-western-movies-of-the-50s?topic-reply-list[settings][filter_by]=all&topic-reply-list[settings][reply_id]=18819540#reply_18819540" title="July 21, 2017 at 1:31:32 PM UTC">2017-07-21T13:31:32+00:00</a>
+</div>
+
+  <div class="component author-component" id="comment-18819540-author"><div class="unranked with-timestamp standalone" data-rank="null">
+  <div class='avatar avatar-and-details'>
+      <div class="image image-user">
+        <a data-action="displayProfileSummary" data-user-id="8936879" href="https://getsatisfaction.com/imdb/people/roy_k7aqttv48ox8z"><div class="avatar relative-positioning"><img alt="Photo of Hoekkie" data-src="https://d2r1vs3d9006ap.cloudfront.net/public/uploaded_images/11014858/image_large.jpg" src="https://ddrj41szzqhh2.cloudfront.net/c-assets/user_default_medium-7d2a56861a28b1de2875b27250ffeaf8.png" style="width: 36px; height: 36px" /></div></a>
+      </div>
+
+    <div class="user">
+      <div class="highlighted-details">
+          <p>
+            
+              <a data-action="displayProfileSummary" data-user-id="8936879" href="https://getsatisfaction.com/imdb/people/roy_k7aqttv48ox8z">Hoekkie</a>
+          </p>
+
+          <ul class="meta">
+              <li>
+                434 Posts
+              </li>
+
+              <li>
+                64 Reply Likes
+              </li>
+
+
+          </ul>
+      </div>
+    </div>
+  </div>
+</div></div>
+
+<div class="clearfix"></div>
+
+<div class="comment-content">
+  <div class="user-generated-content">Yes, a lot of great western movies in the '50s</div>
+
+  <div class="actions clearfix">
+    <ul class="meta">
+        <li>
+          <form accept-charset="UTF-8" action="/imdb/replies/18819540/like" class="new_comment_like" id="new_like" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="XSijLGewZ4wBOC1snJj3tU+vWyvnH2FzvhpPRE/u8cQ=" /></div>
+            <input id="like_topic_id" name="like[topic_id]" type="hidden" value="7558462" />
+            <input id="like_reply_id" name="like[reply_id]" type="hidden" value="18819540" />
+            <button class="button" name="button" title="0 likes" type="submit">Like</button>
+</form>        </li>
+
+
+      <li class="likes" style="display: none;">
+        <span class="gs-icon-star ">
+          <a class="count" data-action="displayUserList" data-scope-key="reply_id" data-scope-value="18819540" data-source="starers" data-title="<span class='count'>0</span> people like this" href="#">0</a>
+        </span>
+      </li>
+    </ul>
+  </div>
+</div>
+</div><script>
+//<![CDATA[
+GSFN.ComponentInitializers.push(function () {
+        GSFN.app['reply_18819540'] = new GSFN.Components['CommentComponent']({"identifier":"reply_18819540","options":{"wrapper":true,"view_name":"comment_component","source_name":null,"javascript":true,"cache_key":"comment-18819540-1500643895-0-0"},"settings":{"reply_id":18818966,"comment_id":18819540}});
+      })
+//]]>
+</script>
+
+
+  <div class="comment-form">
+    <form accept-charset="UTF-8" action="/imdb/replies/18818966/comments" class="new_comment" id="new_comment" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="XSijLGewZ4wBOC1snJj3tU+vWyvnH2FzvhpPRE/u8cQ=" /></div>
+      <div class="input">
+        <textarea id="compose-comment-18818966" name="comment[content]" placeholder="Write a comment" rows="1">
+</textarea>
+        <input id="comment_parent_id" name="comment[parent_id]" type="hidden" value="18818966" />
+        <input id="comment_preserve_whitespace" name="comment[preserve_whitespace]" type="hidden" />
+      </div>
+
+      <div class="form-actions">
+        <button class="button primary small" name="button" type="submit">Submit</button>
+        <button class="button link small cancel" name="cancel" type="submit">Cancel</button>
+      </div>
+</form>  </div>
+</div><script>
+//<![CDATA[
+GSFN.ComponentInitializers.push(function () {
+        GSFN.app['reply-comment-list-18818966'] = new GSFN.Components['CommentListComponent']({"identifier":"reply-comment-list-18818966","options":{"wrapper":true,"view_name":"comment_list_component","source_name":null,"javascript":true},"settings":{"reply_id":18818966,"deep_linked":false,"limit":5,"page":1}});
+      })
+//]]>
+</script>
+      </div>
+  </div>
+</div>
+</div><script>
+//<![CDATA[
+GSFN.ComponentInitializers.push(function () {
+        GSFN.app['reply_18818966'] = new GSFN.Components['ReplyComponent']({"identifier":"reply_18818966","options":{"wrapper":true,"view_name":"reply_component","source_name":null,"javascript":true},"settings":{"reply_id":18818966,"allow_comments":true,"show_comment_list":true,"deep_linked":false}});
+      })
+//]]>
+</script>
+    <div class="component reply-component" id="reply_19073689"><div class="timestamp">
+  <a href="/imdb/topics/poll-suggestion-western-movies-of-the-50s?topic-reply-list[settings][filter_by]=all&topic-reply-list[settings][reply_id]=19073689#reply_19073689" title="November 4, 2017 at 4:28:10 PM UTC">4 weeks ago</a>
+</div>
+
+  <div class="component author-component" id="reply-19073689-author"><div class="unranked with-timestamp standalone" data-rank="null">
+  <div class='avatar avatar-and-details'>
+      <div class="image image-user">
+        <a data-action="displayProfileSummary" data-user-id="8936879" href="https://getsatisfaction.com/imdb/people/roy_k7aqttv48ox8z"><div class="avatar relative-positioning"><img alt="Photo of Hoekkie" data-src="https://d2r1vs3d9006ap.cloudfront.net/public/uploaded_images/11014858/image_large.jpg" src="https://ddrj41szzqhh2.cloudfront.net/c-assets/user_default_large-2e287ec1b49ca3bff41ef32c7a9a09fd.png" style="width: 60px; height: 60px" /></div></a>
+      </div>
+
+    <div class="user">
+      <div class="highlighted-details">
+          <p>
+            
+              <a data-action="displayProfileSummary" data-user-id="8936879" href="https://getsatisfaction.com/imdb/people/roy_k7aqttv48ox8z">Hoekkie</a>
+          </p>
+
+          <ul class="meta">
+              <li>
+                434 Posts
+              </li>
+
+              <li>
+                64 Reply Likes
+              </li>
+
+
+          </ul>
+      </div>
+    </div>
+  </div>
+</div></div>
+
+
+<div class="clearfix"></div>
+
+<div class="reply-content">
+  <div class="user-generated-content">Bump!</div>
+
+  <div class="actions clearfix">
+    <ul class="meta">
+        <li>
+          <form accept-charset="UTF-8" action="/imdb/replies/19073689/like" class="new_like" id="new_like" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="XSijLGewZ4wBOC1snJj3tU+vWyvnH2FzvhpPRE/u8cQ=" /></div>
+            <input id="like_topic_id" name="like[topic_id]" type="hidden" value="7558462" />
+            <input id="like_reply_id" name="like[reply_id]" type="hidden" value="19073689" />
+            <button class="button" name="button" title="0 Reply Likes" type="submit">Like</button>
+</form>        </li>
+
+        <li>
+          <a class="button" data-action="composeComment" data-reply-id="19073689" href="#">Comment</a>
+        </li>
+
+    </ul>
+  </div>
+
+  <div class="resources">
+    <div class="likes" style="display: none;">
+      <ul>
+        <li class="gs-icon-star ">
+          <a class="count" data-action="displayUserList" data-scope-key="reply_id" data-scope-value="19073689" data-source="starers" data-title="<span class='count'>0</span> people like this" href="#"><span class='count'>0</span> people like this</a>
+        </li>
+      </ul>
+</div>
+      <div class="comments">
+        <div class="component comment-list-component" id="reply-comment-list-19073689">
+
+
+  <div class="comment-form">
+    <form accept-charset="UTF-8" action="/imdb/replies/19073689/comments" class="new_comment" id="new_comment" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="XSijLGewZ4wBOC1snJj3tU+vWyvnH2FzvhpPRE/u8cQ=" /></div>
+      <div class="input">
+        <textarea id="compose-comment-19073689" name="comment[content]" placeholder="Write a comment" rows="1">
+</textarea>
+        <input id="comment_parent_id" name="comment[parent_id]" type="hidden" value="19073689" />
+        <input id="comment_preserve_whitespace" name="comment[preserve_whitespace]" type="hidden" />
+      </div>
+
+      <div class="form-actions">
+        <button class="button primary small" name="button" type="submit">Submit</button>
+        <button class="button link small cancel" name="cancel" type="submit">Cancel</button>
+      </div>
+</form>  </div>
+</div><script>
+//<![CDATA[
+GSFN.ComponentInitializers.push(function () {
+        GSFN.app['reply-comment-list-19073689'] = new GSFN.Components['CommentListComponent']({"identifier":"reply-comment-list-19073689","options":{"wrapper":true,"view_name":"comment_list_component","source_name":null,"javascript":true},"settings":{"reply_id":19073689,"deep_linked":false,"limit":5,"page":1}});
+      })
+//]]>
+</script>
+      </div>
+  </div>
+</div>
+</div><script>
+//<![CDATA[
+GSFN.ComponentInitializers.push(function () {
+        GSFN.app['reply_19073689'] = new GSFN.Components['ReplyComponent']({"identifier":"reply_19073689","options":{"wrapper":true,"view_name":"reply_component","source_name":null,"javascript":true},"settings":{"reply_id":19073689,"allow_comments":true,"show_comment_list":true,"deep_linked":false}});
+      })
+//]]>
+</script>
+    <div class="component reply-component" id="reply_19073849"><div class="timestamp">
+  <a href="/imdb/topics/poll-suggestion-western-movies-of-the-50s?topic-reply-list[settings][filter_by]=all&topic-reply-list[settings][reply_id]=19073849#reply_19073849" title="November 4, 2017 at 6:09:04 PM UTC">4 weeks ago</a>
+</div>
+
+  <div class="component author-component" id="reply-19073849-author"><div class="unranked with-timestamp standalone" data-rank="null">
+  <div class='avatar avatar-and-details'>
+      <div class="image image-user">
+        <a data-action="displayProfileSummary" data-user-id="8928134" href="https://getsatisfaction.com/imdb/people/kyle_perez_8yd0eqcwxu1mz"><div class="avatar relative-positioning"><img alt="Photo of Kyle Perez" data-src="https://d2r1vs3d9006ap.cloudfront.net/public/uploaded_images/11007483/11145102033_3be3d71edb_z_large.jpg" src="https://ddrj41szzqhh2.cloudfront.net/c-assets/user_default_large-2e287ec1b49ca3bff41ef32c7a9a09fd.png" style="width: 60px; height: 60px" /></div></a>
+      </div>
+
+    <div class="user">
+      <div class="highlighted-details">
+          <p>
+            
+              <a data-action="displayProfileSummary" data-user-id="8928134" href="https://getsatisfaction.com/imdb/people/kyle_perez_8yd0eqcwxu1mz">Kyle Perez</a>
+          </p>
+
+          <ul class="meta">
+              <li>
+                1088 Posts
+              </li>
+
+              <li>
+                159 Reply Likes
+              </li>
+
+
+          </ul>
+      </div>
+    </div>
+  </div>
+</div></div>
+
+
+<div class="clearfix"></div>
+
+<div class="reply-content">
+  <div class="user-generated-content">I'd probably say <a href="http://www.imdb.com/title/tt0044706/" rel="nofollow" target="_blank" title="Link http//wwwimdbcom/title/tt0044706/">High Noon</a> (1952).</div>
+
+  <div class="actions clearfix">
+    <ul class="meta">
+        <li>
+          <form accept-charset="UTF-8" action="/imdb/replies/19073849/like" class="new_like" id="new_like" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="XSijLGewZ4wBOC1snJj3tU+vWyvnH2FzvhpPRE/u8cQ=" /></div>
+            <input id="like_topic_id" name="like[topic_id]" type="hidden" value="7558462" />
+            <input id="like_reply_id" name="like[reply_id]" type="hidden" value="19073849" />
+            <button class="button" name="button" title="0 Reply Likes" type="submit">Like</button>
+</form>        </li>
+
+        <li>
+          <a class="button" data-action="composeComment" data-reply-id="19073849" href="#">Comment</a>
+        </li>
+
+    </ul>
+  </div>
+
+  <div class="resources">
+    <div class="likes" style="display: none;">
+      <ul>
+        <li class="gs-icon-star ">
+          <a class="count" data-action="displayUserList" data-scope-key="reply_id" data-scope-value="19073849" data-source="starers" data-title="<span class='count'>0</span> people like this" href="#"><span class='count'>0</span> people like this</a>
+        </li>
+      </ul>
+</div>
+      <div class="comments">
+        <div class="component comment-list-component" id="reply-comment-list-19073849">
+
+
+  <div class="comment-form">
+    <form accept-charset="UTF-8" action="/imdb/replies/19073849/comments" class="new_comment" id="new_comment" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="XSijLGewZ4wBOC1snJj3tU+vWyvnH2FzvhpPRE/u8cQ=" /></div>
+      <div class="input">
+        <textarea id="compose-comment-19073849" name="comment[content]" placeholder="Write a comment" rows="1">
+</textarea>
+        <input id="comment_parent_id" name="comment[parent_id]" type="hidden" value="19073849" />
+        <input id="comment_preserve_whitespace" name="comment[preserve_whitespace]" type="hidden" />
+      </div>
+
+      <div class="form-actions">
+        <button class="button primary small" name="button" type="submit">Submit</button>
+        <button class="button link small cancel" name="cancel" type="submit">Cancel</button>
+      </div>
+</form>  </div>
+</div><script>
+//<![CDATA[
+GSFN.ComponentInitializers.push(function () {
+        GSFN.app['reply-comment-list-19073849'] = new GSFN.Components['CommentListComponent']({"identifier":"reply-comment-list-19073849","options":{"wrapper":true,"view_name":"comment_list_component","source_name":null,"javascript":true},"settings":{"reply_id":19073849,"deep_linked":false,"limit":5,"page":1}});
+      })
+//]]>
+</script>
+      </div>
+  </div>
+</div>
+</div><script>
+//<![CDATA[
+GSFN.ComponentInitializers.push(function () {
+        GSFN.app['reply_19073849'] = new GSFN.Components['ReplyComponent']({"identifier":"reply_19073849","options":{"wrapper":true,"view_name":"reply_component","source_name":null,"javascript":true},"settings":{"reply_id":19073849,"allow_comments":true,"show_comment_list":true,"deep_linked":false}});
+      })
+//]]>
+</script>
+    <div class="component reply-component" id="reply_19082231"><div class="timestamp">
+  <a href="/imdb/topics/poll-suggestion-western-movies-of-the-50s?topic-reply-list[settings][filter_by]=all&topic-reply-list[settings][reply_id]=19082231#reply_19082231" title="November 8, 2017 at 1:11:15 PM UTC">4 weeks ago</a>
+</div>
+
+  <div class="component author-component" id="reply-19082231-author"><div class="unranked with-timestamp standalone" data-rank="null">
+  <div class='avatar avatar-and-details'>
+      <div class="image image-user">
+        <a data-action="displayProfileSummary" data-user-id="8362980" href="https://getsatisfaction.com/imdb/people/themoviesmith"><div class="avatar relative-positioning"><img alt="Photo of TheMovieSmith" data-src="https://d2r1vs3d9006ap.cloudfront.net/public/uploaded_images/11017012/Camera_large.jpg" src="https://ddrj41szzqhh2.cloudfront.net/c-assets/user_default_large-2e287ec1b49ca3bff41ef32c7a9a09fd.png" style="width: 60px; height: 60px" /></div></a>
+      </div>
+
+    <div class="user">
+      <div class="highlighted-details">
+          <p>
+            
+              <a data-action="displayProfileSummary" data-user-id="8362980" href="https://getsatisfaction.com/imdb/people/themoviesmith">TheMovieSmith</a>
+          </p>
+
+          <ul class="meta">
+              <li>
+                301 Posts
+              </li>
+
+              <li>
+                40 Reply Likes
+              </li>
+
+
+          </ul>
+      </div>
+    </div>
+  </div>
+</div></div>
+
+
+<div class="clearfix"></div>
+
+<div class="reply-content">
+  <div class="user-generated-content">High Noon</div>
+
+  <div class="actions clearfix">
+    <ul class="meta">
+        <li>
+          <form accept-charset="UTF-8" action="/imdb/replies/19082231/like" class="new_like" id="new_like" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="XSijLGewZ4wBOC1snJj3tU+vWyvnH2FzvhpPRE/u8cQ=" /></div>
+            <input id="like_topic_id" name="like[topic_id]" type="hidden" value="7558462" />
+            <input id="like_reply_id" name="like[reply_id]" type="hidden" value="19082231" />
+            <button class="button" name="button" title="0 Reply Likes" type="submit">Like</button>
+</form>        </li>
+
+        <li>
+          <a class="button" data-action="composeComment" data-reply-id="19082231" href="#">Comment</a>
+        </li>
+
+    </ul>
+  </div>
+
+  <div class="resources">
+    <div class="likes" style="display: none;">
+      <ul>
+        <li class="gs-icon-star ">
+          <a class="count" data-action="displayUserList" data-scope-key="reply_id" data-scope-value="19082231" data-source="starers" data-title="<span class='count'>0</span> people like this" href="#"><span class='count'>0</span> people like this</a>
+        </li>
+      </ul>
+</div>
+      <div class="comments">
+        <div class="component comment-list-component" id="reply-comment-list-19082231">
+
+
+  <div class="comment-form">
+    <form accept-charset="UTF-8" action="/imdb/replies/19082231/comments" class="new_comment" id="new_comment" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="XSijLGewZ4wBOC1snJj3tU+vWyvnH2FzvhpPRE/u8cQ=" /></div>
+      <div class="input">
+        <textarea id="compose-comment-19082231" name="comment[content]" placeholder="Write a comment" rows="1">
+</textarea>
+        <input id="comment_parent_id" name="comment[parent_id]" type="hidden" value="19082231" />
+        <input id="comment_preserve_whitespace" name="comment[preserve_whitespace]" type="hidden" />
+      </div>
+
+      <div class="form-actions">
+        <button class="button primary small" name="button" type="submit">Submit</button>
+        <button class="button link small cancel" name="cancel" type="submit">Cancel</button>
+      </div>
+</form>  </div>
+</div><script>
+//<![CDATA[
+GSFN.ComponentInitializers.push(function () {
+        GSFN.app['reply-comment-list-19082231'] = new GSFN.Components['CommentListComponent']({"identifier":"reply-comment-list-19082231","options":{"wrapper":true,"view_name":"comment_list_component","source_name":null,"javascript":true},"settings":{"reply_id":19082231,"deep_linked":false,"limit":5,"page":1}});
+      })
+//]]>
+</script>
+      </div>
+  </div>
+</div>
+</div><script>
+//<![CDATA[
+GSFN.ComponentInitializers.push(function () {
+        GSFN.app['reply_19082231'] = new GSFN.Components['ReplyComponent']({"identifier":"reply_19082231","options":{"wrapper":true,"view_name":"reply_component","source_name":null,"javascript":true},"settings":{"reply_id":19082231,"allow_comments":true,"show_comment_list":true,"deep_linked":false}});
+      })
+//]]>
+</script>
+    <div class="component reply-component" id="reply_19082238"><div class="timestamp">
+  <a href="/imdb/topics/poll-suggestion-western-movies-of-the-50s?topic-reply-list[settings][filter_by]=all&topic-reply-list[settings][reply_id]=19082238#reply_19082238" title="November 8, 2017 at 1:13:27 PM UTC">4 weeks ago</a>
+</div>
+
+  <div class="component author-component" id="reply-19082238-author"><div class="unranked with-timestamp standalone" data-rank="null">
+  <div class='avatar avatar-and-details'>
+      <div class="image image-champion">
+        <a data-action="displayProfileSummary" data-user-id="7061519" href="https://getsatisfaction.com/imdb/people/dibyayan_chakravorty"><div class="avatar relative-positioning"><img alt="Photo of Dibyayan Chakravorty" data-src="https://d2r1vs3d9006ap.cloudfront.net/public/uploaded_images/11004100/13516611_1031637110218356_6885428718983370719_n_large.jpg" src="https://ddrj41szzqhh2.cloudfront.net/c-assets/user_default_large-2e287ec1b49ca3bff41ef32c7a9a09fd.png" style="width: 60px; height: 60px" /></div></a>
+      </div>
+
+    <div class="user">
+      <div class="highlighted-details">
+          <p>
+                    <i class="gs-icon-trophy fg-champion"></i>
+
+              <a data-action="displayProfileSummary" data-user-id="7061519" href="https://getsatisfaction.com/imdb/people/dibyayan_chakravorty">Dibyayan Chakravorty</a>, Champion
+          </p>
+
+          <ul class="meta">
+              <li>
+                2367 Posts
+              </li>
+
+              <li>
+                843 Reply Likes
+              </li>
+
+
+          </ul>
+      </div>
+    </div>
+  </div>
+</div></div>
+
+
+<div class="clearfix"></div>
+
+<div class="reply-content">
+  <div class="user-generated-content"><b><a href="http://www.imdb.com/title/tt0044706/" rel="nofollow" target="_blank">High Noon</a></b></div>
+
+  <div class="actions clearfix">
+    <ul class="meta">
+        <li>
+          <form accept-charset="UTF-8" action="/imdb/replies/19082238/like" class="new_like" id="new_like" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="XSijLGewZ4wBOC1snJj3tU+vWyvnH2FzvhpPRE/u8cQ=" /></div>
+            <input id="like_topic_id" name="like[topic_id]" type="hidden" value="7558462" />
+            <input id="like_reply_id" name="like[reply_id]" type="hidden" value="19082238" />
+            <button class="button" name="button" title="0 Reply Likes" type="submit">Like</button>
+</form>        </li>
+
+        <li>
+          <a class="button" data-action="composeComment" data-reply-id="19082238" href="#">Comment</a>
+        </li>
+
+    </ul>
+  </div>
+
+  <div class="resources">
+    <div class="likes" style="display: none;">
+      <ul>
+        <li class="gs-icon-star ">
+          <a class="count" data-action="displayUserList" data-scope-key="reply_id" data-scope-value="19082238" data-source="starers" data-title="<span class='count'>0</span> people like this" href="#"><span class='count'>0</span> people like this</a>
+        </li>
+      </ul>
+</div>
+      <div class="comments">
+        <div class="component comment-list-component" id="reply-comment-list-19082238">
+
+
+  <div class="comment-form">
+    <form accept-charset="UTF-8" action="/imdb/replies/19082238/comments" class="new_comment" id="new_comment" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="XSijLGewZ4wBOC1snJj3tU+vWyvnH2FzvhpPRE/u8cQ=" /></div>
+      <div class="input">
+        <textarea id="compose-comment-19082238" name="comment[content]" placeholder="Write a comment" rows="1">
+</textarea>
+        <input id="comment_parent_id" name="comment[parent_id]" type="hidden" value="19082238" />
+        <input id="comment_preserve_whitespace" name="comment[preserve_whitespace]" type="hidden" />
+      </div>
+
+      <div class="form-actions">
+        <button class="button primary small" name="button" type="submit">Submit</button>
+        <button class="button link small cancel" name="cancel" type="submit">Cancel</button>
+      </div>
+</form>  </div>
+</div><script>
+//<![CDATA[
+GSFN.ComponentInitializers.push(function () {
+        GSFN.app['reply-comment-list-19082238'] = new GSFN.Components['CommentListComponent']({"identifier":"reply-comment-list-19082238","options":{"wrapper":true,"view_name":"comment_list_component","source_name":null,"javascript":true},"settings":{"reply_id":19082238,"deep_linked":false,"limit":5,"page":1}});
+      })
+//]]>
+</script>
+      </div>
+  </div>
+</div>
+</div><script>
+//<![CDATA[
+GSFN.ComponentInitializers.push(function () {
+        GSFN.app['reply_19082238'] = new GSFN.Components['ReplyComponent']({"identifier":"reply_19082238","options":{"wrapper":true,"view_name":"reply_component","source_name":null,"javascript":true},"settings":{"reply_id":19082238,"allow_comments":true,"show_comment_list":true,"deep_linked":false}});
+      })
+//]]>
+</script>
+    <div class="component reply-component" id="reply_19093928"><div class="timestamp">
+  <a href="/imdb/topics/poll-suggestion-western-movies-of-the-50s?topic-reply-list[settings][filter_by]=all&topic-reply-list[settings][reply_id]=19093928#reply_19093928" title="November 13, 2017 at 9:18:15 PM UTC">3 weeks ago</a>
+</div>
+
+  <div class="component author-component" id="reply-19093928-author"><div class="unranked with-timestamp standalone" data-rank="null">
+  <div class='avatar avatar-and-details'>
+      <div class="image image-champion">
+        <a data-action="displayProfileSummary" data-user-id="5349926" href="https://getsatisfaction.com/imdb/people/dan_dassow"><div class="avatar relative-positioning"><img alt="Photo of Dan Dassow" data-src="https://d2r1vs3d9006ap.cloudfront.net/public/uploaded_images/9982405/dassow_large.jpg" src="https://ddrj41szzqhh2.cloudfront.net/c-assets/user_default_large-2e287ec1b49ca3bff41ef32c7a9a09fd.png" style="width: 60px; height: 60px" /></div></a>
+      </div>
+
+    <div class="user">
+      <div class="highlighted-details">
+          <p>
+                    <i class="gs-icon-trophy fg-champion"></i>
+
+              <a data-action="displayProfileSummary" data-user-id="5349926" href="https://getsatisfaction.com/imdb/people/dan_dassow">Dan Dassow</a>, Champion
+          </p>
+
+          <ul class="meta">
+              <li>
+                6124 Posts
+              </li>
+
+              <li>
+                5201 Reply Likes
+              </li>
+
+
+          </ul>
+      </div>
+    </div>
+  </div>
+</div></div>
+
+
+<div class="clearfix"></div>
+
+<div class="reply-content">
+  <div class="user-generated-content">My vote: <a href="http://www.imdb.com/title/tt0044706/" rel="nofollow" target="_blank">High Noon</a></div>
+
+  <div class="actions clearfix">
+    <ul class="meta">
+        <li>
+          <form accept-charset="UTF-8" action="/imdb/replies/19093928/like" class="new_like" id="new_like" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="XSijLGewZ4wBOC1snJj3tU+vWyvnH2FzvhpPRE/u8cQ=" /></div>
+            <input id="like_topic_id" name="like[topic_id]" type="hidden" value="7558462" />
+            <input id="like_reply_id" name="like[reply_id]" type="hidden" value="19093928" />
+            <button class="button" name="button" title="0 Reply Likes" type="submit">Like</button>
+</form>        </li>
+
+        <li>
+          <a class="button" data-action="composeComment" data-reply-id="19093928" href="#">Comment</a>
+        </li>
+
+    </ul>
+  </div>
+
+  <div class="resources">
+    <div class="likes" style="display: none;">
+      <ul>
+        <li class="gs-icon-star ">
+          <a class="count" data-action="displayUserList" data-scope-key="reply_id" data-scope-value="19093928" data-source="starers" data-title="<span class='count'>0</span> people like this" href="#"><span class='count'>0</span> people like this</a>
+        </li>
+      </ul>
+</div>
+      <div class="comments">
+        <div class="component comment-list-component" id="reply-comment-list-19093928">
+
+
+  <div class="comment-form">
+    <form accept-charset="UTF-8" action="/imdb/replies/19093928/comments" class="new_comment" id="new_comment" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="XSijLGewZ4wBOC1snJj3tU+vWyvnH2FzvhpPRE/u8cQ=" /></div>
+      <div class="input">
+        <textarea id="compose-comment-19093928" name="comment[content]" placeholder="Write a comment" rows="1">
+</textarea>
+        <input id="comment_parent_id" name="comment[parent_id]" type="hidden" value="19093928" />
+        <input id="comment_preserve_whitespace" name="comment[preserve_whitespace]" type="hidden" />
+      </div>
+
+      <div class="form-actions">
+        <button class="button primary small" name="button" type="submit">Submit</button>
+        <button class="button link small cancel" name="cancel" type="submit">Cancel</button>
+      </div>
+</form>  </div>
+</div><script>
+//<![CDATA[
+GSFN.ComponentInitializers.push(function () {
+        GSFN.app['reply-comment-list-19093928'] = new GSFN.Components['CommentListComponent']({"identifier":"reply-comment-list-19093928","options":{"wrapper":true,"view_name":"comment_list_component","source_name":null,"javascript":true},"settings":{"reply_id":19093928,"deep_linked":false,"limit":5,"page":1}});
+      })
+//]]>
+</script>
+      </div>
+  </div>
+</div>
+</div><script>
+//<![CDATA[
+GSFN.ComponentInitializers.push(function () {
+        GSFN.app['reply_19093928'] = new GSFN.Components['ReplyComponent']({"identifier":"reply_19093928","options":{"wrapper":true,"view_name":"reply_component","source_name":null,"javascript":true},"settings":{"reply_id":19093928,"allow_comments":true,"show_comment_list":true,"deep_linked":false}});
+      })
+//]]>
+</script>
+    <div class="component reply-component" id="reply_19094914"><div class="timestamp">
+  <a href="/imdb/topics/poll-suggestion-western-movies-of-the-50s?topic-reply-list[settings][filter_by]=all&topic-reply-list[settings][reply_id]=19094914#reply_19094914" title="November 14, 2017 at 6:08:43 AM UTC">3 weeks ago</a>
+</div>
+
+  <div class="component author-component" id="reply-19094914-author"><div class="unranked with-timestamp standalone" data-rank="null">
+  <div class='avatar avatar-and-details'>
+      <div class="image image-champion">
+        <a data-action="displayProfileSummary" data-user-id="5554755" href="https://getsatisfaction.com/imdb/people/brndtnlsn"><div class="avatar relative-positioning"><img alt="Photo of Peter" data-src="https://d2r1vs3d9006ap.cloudfront.net/public/uploaded_images/10411165/yome_large.jpg" src="https://ddrj41szzqhh2.cloudfront.net/c-assets/user_default_large-2e287ec1b49ca3bff41ef32c7a9a09fd.png" style="width: 60px; height: 60px" /></div></a>
+      </div>
+
+    <div class="user">
+      <div class="highlighted-details">
+          <p>
+                    <i class="gs-icon-trophy fg-champion"></i>
+
+              <a data-action="displayProfileSummary" data-user-id="5554755" href="https://getsatisfaction.com/imdb/people/brndtnlsn">Peter</a>, Champion
+          </p>
+
+          <ul class="meta">
+              <li>
+                3008 Posts
+              </li>
+
+              <li>
+                2011 Reply Likes
+              </li>
+
+
+          </ul>
+      </div>
+    </div>
+  </div>
+</div></div>
+
+
+<div class="clearfix"></div>
+
+<div class="reply-content">
+  <div class="user-generated-content">Live Poll<br>
+<a href="http://www.imdb.com/poll/pIW0FUWHi9k/" rel="nofollow">http://www.imdb.com/poll/pIW0FUWHi9k/</a></div>
+
+  <div class="actions clearfix">
+    <ul class="meta">
+        <li>
+          <form accept-charset="UTF-8" action="/imdb/replies/19094914/like" class="new_like" id="new_like" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="XSijLGewZ4wBOC1snJj3tU+vWyvnH2FzvhpPRE/u8cQ=" /></div>
+            <input id="like_topic_id" name="like[topic_id]" type="hidden" value="7558462" />
+            <input id="like_reply_id" name="like[reply_id]" type="hidden" value="19094914" />
+            <button class="button" name="button" title="0 Reply Likes" type="submit">Like</button>
+</form>        </li>
+
+        <li>
+          <a class="button" data-action="composeComment" data-reply-id="19094914" href="#">Comment</a>
+        </li>
+
+    </ul>
+  </div>
+
+  <div class="resources">
+    <div class="likes" style="display: none;">
+      <ul>
+        <li class="gs-icon-star ">
+          <a class="count" data-action="displayUserList" data-scope-key="reply_id" data-scope-value="19094914" data-source="starers" data-title="<span class='count'>0</span> people like this" href="#"><span class='count'>0</span> people like this</a>
+        </li>
+      </ul>
+</div>
+      <div class="comments">
+        <div class="component comment-list-component" id="reply-comment-list-19094914">
+
+
+  <div class="comment-form">
+    <form accept-charset="UTF-8" action="/imdb/replies/19094914/comments" class="new_comment" id="new_comment" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="XSijLGewZ4wBOC1snJj3tU+vWyvnH2FzvhpPRE/u8cQ=" /></div>
+      <div class="input">
+        <textarea id="compose-comment-19094914" name="comment[content]" placeholder="Write a comment" rows="1">
+</textarea>
+        <input id="comment_parent_id" name="comment[parent_id]" type="hidden" value="19094914" />
+        <input id="comment_preserve_whitespace" name="comment[preserve_whitespace]" type="hidden" />
+      </div>
+
+      <div class="form-actions">
+        <button class="button primary small" name="button" type="submit">Submit</button>
+        <button class="button link small cancel" name="cancel" type="submit">Cancel</button>
+      </div>
+</form>  </div>
+</div><script>
+//<![CDATA[
+GSFN.ComponentInitializers.push(function () {
+        GSFN.app['reply-comment-list-19094914'] = new GSFN.Components['CommentListComponent']({"identifier":"reply-comment-list-19094914","options":{"wrapper":true,"view_name":"comment_list_component","source_name":null,"javascript":true},"settings":{"reply_id":19094914,"deep_linked":false,"limit":5,"page":1}});
+      })
+//]]>
+</script>
+      </div>
+  </div>
+</div>
+</div><script>
+//<![CDATA[
+GSFN.ComponentInitializers.push(function () {
+        GSFN.app['reply_19094914'] = new GSFN.Components['ReplyComponent']({"identifier":"reply_19094914","options":{"wrapper":true,"view_name":"reply_component","source_name":null,"javascript":true},"settings":{"reply_id":19094914,"allow_comments":true,"show_comment_list":true,"deep_linked":false}});
+      })
+//]]>
+</script>
+    <div class="component reply-component" id="reply_19105173"><div class="timestamp">
+  <a href="/imdb/topics/poll-suggestion-western-movies-of-the-50s?topic-reply-list[settings][filter_by]=all&topic-reply-list[settings][reply_id]=19105173#reply_19105173" title="November 18, 2017 at 1:38:15 AM UTC">2 weeks ago</a>
+</div>
+
+  <div class="component author-component" id="reply-19105173-author"><div class="unranked with-timestamp standalone" data-rank="null">
+  <div class='avatar avatar-and-details'>
+      <div class="image image-champion">
+        <a data-action="displayProfileSummary" data-user-id="5349926" href="https://getsatisfaction.com/imdb/people/dan_dassow"><div class="avatar relative-positioning"><img alt="Photo of Dan Dassow" data-src="https://d2r1vs3d9006ap.cloudfront.net/public/uploaded_images/9982405/dassow_large.jpg" src="https://ddrj41szzqhh2.cloudfront.net/c-assets/user_default_large-2e287ec1b49ca3bff41ef32c7a9a09fd.png" style="width: 60px; height: 60px" /></div></a>
+      </div>
+
+    <div class="user">
+      <div class="highlighted-details">
+          <p>
+                    <i class="gs-icon-trophy fg-champion"></i>
+
+              <a data-action="displayProfileSummary" data-user-id="5349926" href="https://getsatisfaction.com/imdb/people/dan_dassow">Dan Dassow</a>, Champion
+          </p>
+
+          <ul class="meta">
+              <li>
+                6124 Posts
+              </li>
+
+              <li>
+                5201 Reply Likes
+              </li>
+
+
+          </ul>
+      </div>
+    </div>
+  </div>
+</div></div>
+
+
+<div class="clearfix"></div>
+
+<div class="reply-content">
+  <div class="user-generated-content">Congratulations <b><a href="http://www.imdb.com/user/ur28319455/" rel="nofollow" target="_blank">Hoekkie</a></b> on your 60th live poll!<br>As of 16-Nov-2017 12:48 AM Pacific your polls have 61,135 or more votes, for an average of 1,019 votes per poll.<br><br><b>5872nd Live Poll:</b> <a href="http://www.imdb.com/poll/pIW0FUWHi9k/" rel="nofollow" target="_blank">http://www.imdb.com/poll/pIW0FUWHi9k/</a><br><b>Seen:</b> <a href="http://www.imdb.com/seen/ls068997958/" rel="nofollow" target="_blank">http://www.imdb.com/seen/ls068997958/</a><br><br>This is the 2,546th Title poll. Such polls have a total of 5,903,460 votes for an average of 2,319 votes per poll.<br><br>- - -<pre>Total Number of Votes			13,833,242<br>Projected Date of 15 Million Votes	18-May-2018<br>Days Until 15 Million Votes		184</pre>- - -<br><br><b>This is the list of Hoekkie's polls as of 3-Nov-2017:</b><br><br><b>Sorted Alphabetically</b><br><a href="http://mypollwatch.blogspot.com/2014/05/imdb-polls-alphabetical-by-author.html#Hoekkie" rel="nofollow" target="_blank" title="Link http//mypollwatchblogspotcom/2014/05/imdb-polls-alphabetical-by-authorhtmlHoekkie">http://mypollwatch.blogspot.com/2014/05/imdb-polls-alphabetical-by-author.html#Hoekkie</a><br><br><b>In Decreasing Order of Votes</b><br><a href="http://mypollwatch.blogspot.com/2015/03/imdb-polls-descending-order-of-votes-by.html#Hoekkie" rel="nofollow" target="_blank" title="Link http//mypollwatchblogspotcom/2015/03/imdb-polls-descending-order-of-votes-byhtmlHoekkie">http://mypollwatch.blogspot.com/2015/03/imdb-polls-descending-order-of-votes-by.html#Hoekkie</a><br><br>- - -<br><br><b>Alphabetical List of Polls</b><br><a href="http://mypollwatch.blogspot.com/2014/03/imdb-polls-alphabetical.html" rel="nofollow" target="_blank">http://mypollwatch.blogspot.com/2014/03/imdb-polls-alphabetical.html</a><br><br><b>Top IMDb Polls</b><br><a href="http://mypollwatch.blogspot.com/2015/07/top-imdb-polls.html" rel="nofollow" target="_blank">http://mypollwatch.blogspot.com/2015/07/top-imdb-polls.html</a><br><br><b>IMDb Polls - Descending Order of Votes</b><br><a href="http://mypollwatch.blogspot.com/2013/12/imdb-polls-descending-order-of-votes.html" rel="nofollow" target="_blank">http://mypollwatch.blogspot.com/2013/12/imdb-polls-descending-order-of-votes.html</a><br><br><b>Summary Statistics</b><br><a href="http://mypollwatch.blogspot.com/2016/05/summary-statistics.html" rel="nofollow" target="_blank">http://mypollwatch.blogspot.com/2016/05/summary-statistics.html</a><br><br><b>Key Threads - IMDb Poll FAQs Index</b><br><a href="https://getsatisfaction.com/imdb/topics/faq-key-threads-imdb-poll-faqs-index" rel="nofollow" target="_blank">https://getsatisfaction.com/imdb/topics/faq-key-threads-imdb-poll-faqs-index</a><br><br><b>How to Improve the Chance of Having your Poll on the Home Page</b><br><a href="https://getsatisfaction.com/imdb/topics/faq-how-to-improve-the-chance-of-having-your-poll-on-the-home-page" rel="nofollow" target="_blank">https://getsatisfaction.com/imdb/topics/faq-how-to-improve-the-chance-of-having-your-poll-on-the-hom...</a></div>
+
+  <div class="actions clearfix">
+    <ul class="meta">
+        <li>
+          <form accept-charset="UTF-8" action="/imdb/replies/19105173/like" class="new_like" id="new_like" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="XSijLGewZ4wBOC1snJj3tU+vWyvnH2FzvhpPRE/u8cQ=" /></div>
+            <input id="like_topic_id" name="like[topic_id]" type="hidden" value="7558462" />
+            <input id="like_reply_id" name="like[reply_id]" type="hidden" value="19105173" />
+            <button class="button" name="button" title="0 Reply Likes" type="submit">Like</button>
+</form>        </li>
+
+        <li>
+          <a class="button" data-action="composeComment" data-reply-id="19105173" href="#">Comment</a>
+        </li>
+
+    </ul>
+  </div>
+
+  <div class="resources">
+    <div class="likes" style="display: none;">
+      <ul>
+        <li class="gs-icon-star ">
+          <a class="count" data-action="displayUserList" data-scope-key="reply_id" data-scope-value="19105173" data-source="starers" data-title="<span class='count'>0</span> people like this" href="#"><span class='count'>0</span> people like this</a>
+        </li>
+      </ul>
+</div>
+      <div class="comments">
+        <div class="component comment-list-component" id="reply-comment-list-19105173">
+
+
+  <div class="comment-form">
+    <form accept-charset="UTF-8" action="/imdb/replies/19105173/comments" class="new_comment" id="new_comment" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="XSijLGewZ4wBOC1snJj3tU+vWyvnH2FzvhpPRE/u8cQ=" /></div>
+      <div class="input">
+        <textarea id="compose-comment-19105173" name="comment[content]" placeholder="Write a comment" rows="1">
+</textarea>
+        <input id="comment_parent_id" name="comment[parent_id]" type="hidden" value="19105173" />
+        <input id="comment_preserve_whitespace" name="comment[preserve_whitespace]" type="hidden" />
+      </div>
+
+      <div class="form-actions">
+        <button class="button primary small" name="button" type="submit">Submit</button>
+        <button class="button link small cancel" name="cancel" type="submit">Cancel</button>
+      </div>
+</form>  </div>
+</div><script>
+//<![CDATA[
+GSFN.ComponentInitializers.push(function () {
+        GSFN.app['reply-comment-list-19105173'] = new GSFN.Components['CommentListComponent']({"identifier":"reply-comment-list-19105173","options":{"wrapper":true,"view_name":"comment_list_component","source_name":null,"javascript":true},"settings":{"reply_id":19105173,"deep_linked":false,"limit":5,"page":1}});
+      })
+//]]>
+</script>
+      </div>
+  </div>
+</div>
+</div><script>
+//<![CDATA[
+GSFN.ComponentInitializers.push(function () {
+        GSFN.app['reply_19105173'] = new GSFN.Components['ReplyComponent']({"identifier":"reply_19105173","options":{"wrapper":true,"view_name":"reply_component","source_name":null,"javascript":true},"settings":{"reply_id":19105173,"allow_comments":true,"show_comment_list":true,"deep_linked":false}});
+      })
+//]]>
+</script>
+    <div class="component reply-component" id="reply_19132944"><div class="timestamp">
+  <a href="/imdb/topics/poll-suggestion-western-movies-of-the-50s?topic-reply-list[settings][filter_by]=all&topic-reply-list[settings][reply_id]=19132944#reply_19132944" title="December 1, 2017 at 5:49:52 AM UTC">3 days ago</a>
+</div>
+
+  <div class="component author-component" id="reply-19132944-author"><div class="unranked with-timestamp standalone" data-rank="null">
+  <div class='avatar avatar-and-details'>
+      <div class="image image-champion">
+        <a data-action="displayProfileSummary" data-user-id="7061519" href="https://getsatisfaction.com/imdb/people/dibyayan_chakravorty"><div class="avatar relative-positioning"><img alt="Photo of Dibyayan Chakravorty" data-src="https://d2r1vs3d9006ap.cloudfront.net/public/uploaded_images/11004100/13516611_1031637110218356_6885428718983370719_n_large.jpg" src="https://ddrj41szzqhh2.cloudfront.net/c-assets/user_default_large-2e287ec1b49ca3bff41ef32c7a9a09fd.png" style="width: 60px; height: 60px" /></div></a>
+      </div>
+
+    <div class="user">
+      <div class="highlighted-details">
+          <p>
+                    <i class="gs-icon-trophy fg-champion"></i>
+
+              <a data-action="displayProfileSummary" data-user-id="7061519" href="https://getsatisfaction.com/imdb/people/dibyayan_chakravorty">Dibyayan Chakravorty</a>, Champion
+          </p>
+
+          <ul class="meta">
+              <li>
+                2367 Posts
+              </li>
+
+              <li>
+                843 Reply Likes
+              </li>
+
+
+          </ul>
+      </div>
+    </div>
+  </div>
+</div></div>
+
+
+<div class="clearfix"></div>
+
+<div class="reply-content">
+  <div class="user-generated-content">Congratulations Hoekkie. This is the <b>5t</b><b>h</b> time your poll has been featured at IMDb Home Page (<a href="http://www.imdb.com/" rel="nofollow" target="_blank" title="Link http//wwwimdbcom/url">http://www.imdb.com</a>) since <b>July 28, 2015</b>.<br><br><b>01 December 2017:</b> Western Movies of the '50s - <u><a href="http://www.imdb.com/poll/pIW0FUWHi9k/" rel="nofollow" target="_blank">http://www.imdb.com/poll/pIW0FUWHi9k/</a> </u>(A poll by Hoekkie)<br><br><br>Poll Author - Number of Polls Featured at IMDb Home Page (Since July 28, 2015) <br><br><br>Dibyayan_Chakravorty - 61<br>urbanemovies - 23<br>Rafael_M - 15<br>pere-25366 - 14<br>KhaledKalache - 13<br>Simba63 - 13<br>IMDb-Editors - 13<br>ElMaruecan82 - 11<br>The-Social-Introvert - 9<br>dan_dassow - 8<br>yrnej - 8<br>rubyfruit76 - 8<br>sir-mauri - 8<br>Kirk-Picard - 7<br>peaspot - 6<br>NDbportmanfan - 6<br>masandaglinus123 - 6<br>pbn - 5<br>Teriek-Williams - 5<br>leavey-2 - 5<br><b><i><u>Hoekkie - 5</u></i></b><br>Manya086 - 4<br>Mega_wizard - 4<br>DoctorBuster - 4<br>borimor - 4<br>ladydeadpool96 - 4<br>penchofifteenpolls - 3<br>jalapenoman - 3<br>TsarStepan - 3<br>TheMovieSmith - 2<br>jamesh5 - 2<br>KyBelle86 - 2<br>Eagles90 - 2<br>RbDeraj - 2<br>moatazaboalghuit - 2<br>lnvicta - 2<br>Debjit_Hazra - 2<br>SkyDeshpande - 2<br>ahmad_alaghbar - 1 <br>mattyankster10 - 1 <br>Silitonga - 1 <br>bluehunter16 - 1 <br>Pictoris - 1 <br>JoelRH - 1 <br>BigBadDolemite - 1 <br>alioth4 - 1 <br>vamken46 1 <br>Jessica - 1 <br>alex_1-801-348552 - 1 <br>dgranger - 1 <br>rose-taylor - 1 <br>FisnikFizz - 1 <br>Drevnibor - 1 <br>Garfield_the_Avenger - 1 <br>vibhorpanda29 - 1 <br>buddhalou - 1 <br>waspinatorbj - 1 <br>muzzle - 1 <br>Jediknight29 - 1 <br>Paok-Kilkis - 1 <br>Lucilfer - 1 <br>Wonder_Gal - 1<br>Hyker - 1<br>jamariana - 1<br>daniellejeffrey - 1<br>DeadMan66 - 1<br>fancinderella - 1<br><br><img src="https://d2r1vs3d9006ap.cloudfront.net/s3_images/1678092/RackMultipart20171201-90220-8835tk-1_inline.JPG?1512107368"></div>
+
+  <div class="actions clearfix">
+    <ul class="meta">
+        <li>
+          <form accept-charset="UTF-8" action="/imdb/replies/19132944/like" class="new_like" id="new_like" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="XSijLGewZ4wBOC1snJj3tU+vWyvnH2FzvhpPRE/u8cQ=" /></div>
+            <input id="like_topic_id" name="like[topic_id]" type="hidden" value="7558462" />
+            <input id="like_reply_id" name="like[reply_id]" type="hidden" value="19132944" />
+            <button class="button" name="button" title="1 Reply Like" type="submit">Like</button>
+</form>        </li>
+
+        <li>
+          <a class="button" data-action="composeComment" data-reply-id="19132944" href="#">Comment</a>
+        </li>
+
+    </ul>
+  </div>
+
+  <div class="resources">
+    <div class="likes" style="">
+      <ul>
+        <li class="gs-icon-star ">
+          <a class="count" data-action="displayUserList" data-scope-key="reply_id" data-scope-value="19132944" data-source="starers" data-title="<span class='count'>1</span> person likes this" href="#"><span class='count'>1</span> person likes this</a>
+        </li>
+      </ul>
+</div>
+      <div class="comments">
+        <div class="component comment-list-component" id="reply-comment-list-19132944">
+
+
+  <div class="comment-form">
+    <form accept-charset="UTF-8" action="/imdb/replies/19132944/comments" class="new_comment" id="new_comment" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="XSijLGewZ4wBOC1snJj3tU+vWyvnH2FzvhpPRE/u8cQ=" /></div>
+      <div class="input">
+        <textarea id="compose-comment-19132944" name="comment[content]" placeholder="Write a comment" rows="1">
+</textarea>
+        <input id="comment_parent_id" name="comment[parent_id]" type="hidden" value="19132944" />
+        <input id="comment_preserve_whitespace" name="comment[preserve_whitespace]" type="hidden" />
+      </div>
+
+      <div class="form-actions">
+        <button class="button primary small" name="button" type="submit">Submit</button>
+        <button class="button link small cancel" name="cancel" type="submit">Cancel</button>
+      </div>
+</form>  </div>
+</div><script>
+//<![CDATA[
+GSFN.ComponentInitializers.push(function () {
+        GSFN.app['reply-comment-list-19132944'] = new GSFN.Components['CommentListComponent']({"identifier":"reply-comment-list-19132944","options":{"wrapper":true,"view_name":"comment_list_component","source_name":null,"javascript":true},"settings":{"reply_id":19132944,"deep_linked":false,"limit":5,"page":1}});
+      })
+//]]>
+</script>
+      </div>
+  </div>
+</div>
+</div><script>
+//<![CDATA[
+GSFN.ComponentInitializers.push(function () {
+        GSFN.app['reply_19132944'] = new GSFN.Components['ReplyComponent']({"identifier":"reply_19132944","options":{"wrapper":true,"view_name":"reply_component","source_name":null,"javascript":true},"settings":{"reply_id":19132944,"allow_comments":true,"show_comment_list":true,"deep_linked":false}});
+      })
+//]]>
+</script>
+
+    <div id="edit_reply_template" style="display:none;">
+      <div class="component compose-reply-component" id="edit-reply-template">  <div class="reply-form">
+      <form accept-charset="UTF-8" action="/imdb/topics/poll-suggestion-western-movies-of-the-50s/replies?c2=1" class="edit_reply" id="edit_reply" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="_method" type="hidden" value="patch" /><input name="authenticity_token" type="hidden" value="XSijLGewZ4wBOC1snJj3tU+vWyvnH2FzvhpPRE/u8cQ=" /></div>
+        <div class="input">
+          <textarea id="edit-reply-19132944" name="reply[content]" placeholder="Write a reply" rows="1">
+</textarea>
+          <input id="reply_topic_id" name="reply[topic_id]" type="hidden" value="7558462" />
+          <input id="reply_preserve_whitespace" name="reply[preserve_whitespace]" type="hidden" />
+        </div>
+
+        <div class="form-actions">
+          <button class="button small primary" name="submit" type="submit">Submit</button>
+          <button class="button small link" name="cancel" type="submit">Cancel</button>
+        </div>
+</form>  </div>
+</div><script>
+//<![CDATA[
+GSFN.ComponentInitializers.push(function () {
+        GSFN.app['edit-reply-template'] = new GSFN.Components['ComposeReplyComponent']({"identifier":"edit-reply-template","options":{"wrapper":true,"view_name":"compose_reply_component","source_name":null,"javascript":true},"settings":{"form_only":true,"edit":true,"reply_id":19132944}});
+      })
+//]]>
+</script>
+    </div>
+
+</div><script>
+//<![CDATA[
+GSFN.ComponentInitializers.push(function () {
+        GSFN.app['topic-reply-list'] = new GSFN.Components['ReplyListComponent']({"identifier":"topic-reply-list","options":{"wrapper":true,"view_name":"reply_list_component","source_name":"topic","javascript":true,"items_only":false,"settings":{"reply_id":null}},"settings":{"limit":25,"page":1,"sort_on":"created_at","sort_order":"ASC","filter_by":null,"original_path":null,"reply_id":null}});
+      })
+//]]>
+</script>
+
+
+    <div class="component compose-reply-component" id="compose-reply">  <div class="reply-form">
+      <form accept-charset="UTF-8" action="/imdb/topics/poll-suggestion-western-movies-of-the-50s/replies?c2=1" class="new_reply" id="new_reply" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="XSijLGewZ4wBOC1snJj3tU+vWyvnH2FzvhpPRE/u8cQ=" /></div>
+        <div class="input">
+          <textarea id="compose-reply-7558462" name="reply[content]" placeholder="Write a reply" rows="1">
+</textarea>
+          <input id="reply_topic_id" name="reply[topic_id]" type="hidden" value="7558462" />
+          <input id="reply_preserve_whitespace" name="reply[preserve_whitespace]" type="hidden" />
+        </div>
+
+        <div class="form-actions">
+          <button class="button small primary" name="submit" type="submit">Submit</button>
+          <button class="button small link" name="cancel" type="submit">Cancel</button>
+        </div>
+</form>  </div>
+</div><script>
+//<![CDATA[
+GSFN.ComponentInitializers.push(function () {
+        GSFN.app['compose-reply'] = new GSFN.Components['ComposeReplyComponent']({"identifier":"compose-reply","options":{"wrapper":true,"view_name":"compose_reply_component","source_name":"topic","javascript":true},"settings":{"form_only":false,"edit":false,"reply_id":null}});
+      })
+//]]>
+</script>
+
+          </div>
+
+            <div class="sidebar">
+                <div class="tablet">
+    <div class="component actions-component" id="actions-tablet"><ul class="">
+  <li>
+    <div class="component me-too-action-component" id="topic-me-too-tablet">  <div class="button-container with-count">
+    <div>
+      <form accept-charset="UTF-8" action="/imdb/topics/poll-suggestion-western-movies-of-the-50s/me_toos" class="new_me_too" id="me-too-form-7558462-tablet" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="XSijLGewZ4wBOC1snJj3tU+vWyvnH2FzvhpPRE/u8cQ=" /></div>
+        <input id="me-too-7558462-tablet" name="me_too[topic_id]" type="hidden" value="7558462" />
+        <button class="primary button me-too-form " name="button" type="submit">
+          <i class="icon-like"></i>
+          <span class="">Like</span>
+</button></form></div>
+    <div>
+      <form accept-charset="UTF-8" action="/imdb/topics/poll-suggestion-western-movies-of-the-50s/me_toos/not_nil" class="edit_me_too" id="unme-too-form-7558462-tablet" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="_method" type="hidden" value="delete" /><input name="authenticity_token" type="hidden" value="XSijLGewZ4wBOC1snJj3tU+vWyvnH2FzvhpPRE/u8cQ=" /></div>
+        <input id="unme-too-7558462-tablet" name="me_too[topic_id]" type="hidden" value="7558462" />
+        <button class="primary button un-me-too-form inactive" name="button" type="submit">
+          <i class="icon-unlike"></i>
+          <span class="">Unlike</span>
+</button></form></div>  </div>
+
+  <div class="count-container ">
+    <a class="count unselected" data-action="displayUserList" data-scope-key="topic_id" data-scope-value="7558462" data-source="metooers" data-title="&lt;strong class=&#39;number&#39;&gt;3&lt;/strong&gt; people like this praise" href="#">3</a>
+  </div>
+</div><script>
+//<![CDATA[
+GSFN.ComponentInitializers.push(function () {
+        GSFN.app['topic-me-too-tablet'] = new GSFN.Components['MeTooActionComponent']({"identifier":"topic-me-too-tablet","options":{"wrapper":true,"view_name":"me_too_action_component","source_name":"topic","javascript":true},"settings":{"display_count":true,"button_color":"primary","show_label":true,"is_already_selected":null,"extra_identifier":"-tablet"}});
+      })
+//]]>
+</script>
+  </li>
+
+  <li>
+    <div class="component follow-action-component" id="topic-follow-tablet"><div class="topic-follow-container">
+  <div class="button-container  with-count" data-following="false">
+    <div>
+      <form accept-charset="UTF-8" action="/imdb/topics/poll-suggestion-western-movies-of-the-50s/follows" class="new_follow" id="follow-form-7558462-tablet" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="XSijLGewZ4wBOC1snJj3tU+vWyvnH2FzvhpPRE/u8cQ=" /></div>
+        <input id="follow-item-7558462-tablet" name="follow[item_to_follow_id]" type="hidden" value="7558462" />
+        <button class="primary button follow-form " id="follow-7558462-button-tablet" name="button" type="submit">
+          <i class="icon-follow"></i>
+          <span class="">Follow</span>
+</button>
+</form></div>
+    <div>
+      <form accept-charset="UTF-8" action="/imdb/topics/poll-suggestion-western-movies-of-the-50s/follows/not_nil" class="edit_follow" id="unfollow-form-7558462-tablet" method="post"><div style="display:none"><input name="utf8" type="hidden" value="&#x2713;" /><input name="_method" type="hidden" value="delete" /><input name="authenticity_token" type="hidden" value="XSijLGewZ4wBOC1snJj3tU+vWyvnH2FzvhpPRE/u8cQ=" /></div>
+        <input id="unfollow-item-7558462-tablet" name="follow[item_to_follow_id]" type="hidden" value="7558462" />
+        <button class="primary button unfollow-form inactive" id="unfollow-7558462-button-tablet" name="button" type="submit">
+          <i class="icon-unfollow"></i>
+          <span class="">Unfollow</span>
+</button></form></div>  </div>
+
+  <div class="count-container ">
+    <a class="count unselected" data-action="displayUserList" data-scope-key="topic_id" data-scope-value="7558462" data-source="followers" data-title="&lt;strong class=&#39;number&#39;&gt;9&lt;/strong&gt; people follow this praise" href="#">9</a>
+  </div>
+</div>
+</div><script>
+//<![CDATA[
+GSFN.ComponentInitializers.push(function () {
+        GSFN.app['topic-follow-tablet'] = new GSFN.Components['FollowActionComponent']({"identifier":"topic-follow-tablet","options":{"wrapper":true,"view_name":"follow_action_component","source_name":"topic","javascript":true},"settings":{"display_follower_count_text":null,"layout":"vertical","button_color":"primary","button_size":"large","force_follow_selected":false,"follower_count":null,"display_count":true,"show_label":true,"item_to_follow":null,"item_to_follow_id":null,"is_already_following":false,"analytics":null,"sync_full_page":true,"extra_identifier":"-tablet"}});
+      })
+//]]>
+</script>
+  </li>
+</ul>
+</div>
+  </div>
+
+  <div class="component topic-list-simple-component" id="related-content"></div>
+  <script>
+//<![CDATA[
+
+    $.ajax({
+      method: "GET",
+      url: "/imdb/topics/7558462/related_conversations",
+      data: {
+        title: "Related Conversations"
+      },
+      success: function(data){
+        $('#related-content').html(data);
+      }
+    });
+
+//]]>
+</script>
+  <div class="component category-list-gallery-component" id="related-categories">  <h2 class="heading">
+    Related Categories
+  </h2>
+
+  <ul>
+      <li class="category">
+        <a class="image" href="/imdb/categories/imdb_imdb_poll">
+          <img alt="Photo of IMDb Poll" src="https://d2r1vs3d9006ap.cloudfront.net/public/uploaded_images/11004067/2491-1y33srj_inline_xlarge.JPG" width="55" />
+</a>
+        <h5 class="name">
+          <a href="/imdb/categories/imdb_imdb_poll">IMDb Poll</a>
+        </h5>
+
+        <ul class="meta">
+          <li>
+            <strong>2905</strong> Conversations
+          </li>
+
+          <li>
+            <strong>574</strong> Followers
+          </li>
+        </ul>
+      </li>
+  </ul>
+
+</div><script>
+//<![CDATA[
+GSFN.ComponentInitializers.push(function () {
+        GSFN.app['related-categories'] = new GSFN.Components['CategoryListComponent']({"identifier":"related-categories","options":{"wrapper":true,"view_name":"category_list_gallery_component","source_name":"topic_gallery","javascript":true,"items_only":false},"settings":{"title":"Related Categories","subtitle":null,"limit":16,"category_set_limit":1000,"topic_limit":1000,"show_follow":true,"force_following":false,"page":1,"analytics":null,"show_view_all":false,"show_description":false,"link_target":null}});
+      })
+//]]>
+</script>
+
+            </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="component custom-component" id="custom-footer"></div><script>
+//<![CDATA[
+GSFN.ComponentInitializers.push(function () {
+        GSFN.app['custom-footer'] = new GSFN.Components['CustomComponent']({"identifier":"custom-footer","options":{"wrapper":true,"view_name":"custom_component","source_name":null,"javascript":true},"settings":{"id":"1d61c2f","type":"footer","with_padding":false}});
+      })
+//]]>
+</script>
+
+          <div class="container">
+              <p>
+                <a href="http://getsatisfaction.com" target="_blank">
+                  Powered by Get Satisfaction
+                </a>
+              </p>
+
+              <ul>
+                <li>
+                  <a href="https://getsatisfaction.com/corp/website/terms-of-service" target="_blank">
+                    Terms
+                  </a>
+                </li>
+
+                <li>
+                  <a href="https://getsatisfaction.com/corp/website/privacy-policy" target="_blank">
+                    Privacy
+                  </a>
+                </li>
+
+                <li>
+                  <a href="https://getsatisfaction.com/corp/website/cookies" target="_blank">
+                    Cookies
+                  </a>
+                </li>
+
+
+              </ul>
+            </div>
+      </div>
+    </div>
+
+
+    <script src="https://ddrj41szzqhh2.cloudfront.net/c-assets/twitter_cldr/en-07f0ed9a9785789776664d674bf9d57b.js"></script>
+    <script src="https://ddrj41szzqhh2.cloudfront.net/c-assets/application-906a6916e4c8993803741e99719b0971.js"></script>
+
+      <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-51b769b777fcd439"></script>
+
+    <script>
+//<![CDATA[
+
+      $(function () {
+        I18n.locale = "en";
+        GSFN.Authenticatable.AUTH_HOST = "https://auth.getsatisfaction.com";
+        GSFN.Authenticatable.companyId = 16491;
+        GSFN.Authenticatable.authenticatedUser = null;
+        GSFN.Authenticatable.domain = "imdb";
+
+        GSFN.loader = new GSFN.Loader('body');
+
+          GSFN.Authenticatable.isAuthenticated(function (cb) { if (typeof cb === 'function') { cb(); }}, function () {});
+
+        _.each(GSFN.ComponentInitializers, function (initializer) { initializer(); });
+
+        if (typeof GSFN.Components['ProfileSummaryComponent'] !== 'undefined') {
+          $(document).on('click', '[data-action="displayProfileSummary"]', function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+
+            new GSFN.Components['ProfileSummaryComponent']({
+              identifier: "profile-summary",
+              settings: {
+                user_id: $(event.currentTarget).data('user-id')
+              }
+            });
+          });
+        }
+      });
+
+//]]>
+</script>
+    <script>
+//<![CDATA[
+
+      $(function () {
+              if (typeof GSFN.Components['BadgeDescriptionComponent'] !== 'undefined') {
+        $(document).on('click', '[data-action="displayBadgeDescription"]', function (event) {
+          event.preventDefault();
+
+          var $target = $(event.currentTarget);
+
+          new GSFN.Components['BadgeDescriptionComponent']({
+            identifier: "badge_description"
+          });
+        });
+      }
+
+      });
+
+//]]>
+</script>
+    <script>
+//<![CDATA[
+
+      // Redirect to getsat url to set a dummy cookie as a workaround for safari 3rd party cookie issue.
+      // https://github.com/vitr/safari-cookie-in-iframe
+
+      function goTo(url) {
+        var a = document.createElement("a");
+        if (a.click){
+        // HTML5 browsers and IE support click() on <a>, early FF does not.
+          a.setAttribute("href", url);
+          a.style.display = "none";
+          document.body.appendChild(a);
+          a.click();
+        } else {
+          // Early FF can, however, use this usual method
+          // where IE cannot with secure links.
+          window.location = url;
+        }
+      }
+      var is_safari = navigator.vendor && navigator.vendor.indexOf('Apple') > -1 &&
+        navigator.userAgent && !navigator.userAgent.match('CriOS'); // safari detection
+
+      if (is_safari) {
+        if (!$.cookie('safari_redirected')) {
+          $.cookie('safari_redirected', 'safari_redirected', { expires: 365, path: '/' });// 1 year
+          var url = "https://auth.getsatisfaction.com/auth/safari_redirect?company_domain=imdb"
+          goTo(url);
+        }
+      }
+
+//]]>
+</script>
+    <!-- Clickjaking defence, refer: https://owasp.org/index.php/Clickjacking_Defense_Cheat_Sheet-->
+    <style id="antiClickjack">body{display:none !important;}</style>
+    <script type="text/javascript">
+      if (self === top) {
+        var antiClickjack = document.getElementById("antiClickjack");
+        antiClickjack.parentNode.removeChild(antiClickjack);
+      } else {
+        top.location = self.location;
+      }
+    </script>
+
+      <script>
+//<![CDATA[
+
+        $(function () {
+                  if (typeof GSFN.Components['UserListComponent'] !== 'undefined') {
+          $(document).on('click', '[data-action="displayUserList"]', function (event) {
+            event.preventDefault();
+
+            var $target = $(event.currentTarget);
+
+            new GSFN.Components['UserListComponent']({
+              identifier: "user-list",
+              options: {
+                view_name: 'user_list_simple_component'
+              },
+              settings: {
+                scope_value: $target.data('scopeValue'),
+                scope_key: $target.data('scopeKey'),
+                source: $target.data('source'),
+                title: $target.attr('data-title'),
+                read_only_badges: true,
+                auto_initialize: true
+              }
+            });
+          });
+        }
+
+        });
+
+//]]>
+</script>
+    <!--[if lte IE 8]>
+      <div class="unsupported-browser-container"></div>
+      <div class="unsupported-browser-banner">
+        <h1>Your browser is not supported</h1>
+        <p>The web browser you are using is out of date and not supported by this site.  Please update your browser. Or, if you are using Internet Explorer 9+, please <a href="http://www.howtogeek.com/128289/how-to-disable-compatibility-mode-in-internet-explorer/">ensure Compatibility View is disabled</a>.</p>
+        <ul>
+          <li class="safari"><a href="http://support.apple.com/en_US/downloads/safari" target="_blank">Safari 5+</a></li>
+          <li class="chrome"><a href="https://www.google.com/intl/en/chrome/browser/desktop/index.html" target="_blank">Chrome 8+</a></li>
+          <li class="firefox"><a href="https://www.mozilla.org/en-US/firefox/new" target="_blank">Firefox 5+</a></li>
+          <li class="ie"><a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie" target="_blank">IE 9+</a></li>
+        </ul>
+      </div>
+    <![endif]-->
+  </body>
+</html>
+
+
